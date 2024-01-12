@@ -45,5 +45,5 @@ Now to quit is my ESC key
 1. Command to clone your GitHub repository:
 
 ```
-**write command here so it will look fancy on GitHub** 
+**git clone git@github.com:WSU-kduncan/ceg2350s24-Luximo.git** 
 ```
