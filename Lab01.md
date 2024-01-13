@@ -37,7 +37,7 @@ Now to quit is my ESC key
 1. SSH command to sign in to your AWS instance:
 
 ```
-**write command here so it will look fancy on GitHub**
+**ssh -i ceg2350.pem ubuntu@184.73.215.70**
 ```
 
 ## Part 5 Answers
