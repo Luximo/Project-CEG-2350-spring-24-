@@ -37,7 +37,7 @@ Now to quit is my ESC key
 1. SSH command to sign in to your AWS instance:
 
 ```
-**ssh -i ceg2350.pem ubuntu@184.73.215.70**
+ssh -i ceg2350.pem ubuntu@184.73.215.70
 ```
 
 ## Part 5 Answers
@@ -45,5 +45,5 @@ Now to quit is my ESC key
 1. Command to clone your GitHub repository:
 
 ```
-**git clone git@github.com:WSU-kduncan/ceg2350s24-Luximo.git** 
+git clone git@github.com:WSU-kduncan/ceg2350s24-Luximo.git
 ```
