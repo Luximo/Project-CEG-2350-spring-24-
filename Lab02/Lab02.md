@@ -43,7 +43,7 @@ For each, write the command used or answer the question posed.
 
 2. `/home/motuvedo`
 
-3. I don't think so, this negates the possibility of user ubuntu having the privilege of altering the contents of motuved's home directory. The sole possessor of the privilege of alteration is motuvedo.”
+3. I don't think so, this negates the possibility of user ubuntu having the privilege of altering the contents of motuvedo's home directory. The sole possessor of the privilege of alteration is motuvedo.”
 
 4. `su motuvedo`
 
