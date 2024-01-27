@@ -13,7 +13,7 @@
 
 4. `cat << "DONE" > here.txt`: This command generates a file with the name here.txt that resides in the current working directory and transfers the input from the standard input stream to the file until it meets the word DONE. The << operator is known as a here document and it enables the user to input multiple lines of input without using quotation marks or escape characters. For instance, if the user types:
 
-1. `cat << "DONE" > here.txt ` in ubuntu...
+ - `cat << "DONE" > here.txt ` in ubuntu...
  - `hello`
  - `world`
  - `DONE` (the program ends here)
