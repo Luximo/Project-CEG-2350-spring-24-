@@ -1,7 +1,7 @@
 ## Lab 03
 
-- Name:
-- Email
+- Name: Moses Otuvedo
+- Email: otuvedo.3@wright.edu
 
 ## Part 1 Answers
 
