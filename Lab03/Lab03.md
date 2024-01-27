@@ -12,11 +12,12 @@
 3. `cat nums.txt | sort >> all_nums.txt`: This command joins the file with the name nums.txt to the standard output stream, which is then transferred to the sort command. The sort command arranges the lines of its input in ascending order based on the -n flag, which signifies numerical order. The arranged output is subsequently added to the end of the file with the name all_nums.txt that resides in the current working directory. The file all_nums.txt consequently contains the ordered numbers from nums.txt as the last part of its content.
 
 4. `cat << "DONE" > here.txt`: This command generates a file with the name here.txt that resides in the current working directory and transfers the input from the standard input stream to the file until it meets the word DONE. The << operator is known as a here document and it enables the user to input multiple lines of input without using quotation marks or escape characters. For instance, if the user types:
-
+##
 `cat << "DONE" > here.txt ` in ubuntu...
 `hello`
 `world`
 `DONE` (the program ends here)
+##
 
 5. `ls -lt ~ | head`: This command displays the files and directories that reside in the user’s home directory (~) to the standard output stream, in accordance with the -l flag, which signifies long format, and the -t flag, which signifies sorted by modification time in descending order. The output is subsequently transferred to the head command, which outputs the first 10 lines of its input to the standard output stream. The outcome is the 10 most recently altered files or directories that reside in the user’s home directory, along with their attributes such as permissions, owner, size, and date.
 
