@@ -29,7 +29,8 @@ Verify that `roll` made it to your GitHub repository for this course and is in y
 
 ## Part 3 - Retrospective Answers
 
-1. 
+1. ![Step 1 answer completed](image.png)
+
 2. 
 3. 
 
