@@ -1,9 +1,8 @@
 #!/bin/bash
-# This is a script that outputs a random number between 1 and 20
-# The script should be executable by the user
+# This is a script that outputs a random number between 1 and 20...
 
-# Generate a random number between 1 and 20 using the $RANDOM variable and the modulo operator
+# Output a random number between 1 and 20...
 number=$(( $RANDOM % 20 + 1 ))
 
-# Print the output to the standard output stream
+# Print the output to the standard output stream...
 echo "You rolled a $number"
