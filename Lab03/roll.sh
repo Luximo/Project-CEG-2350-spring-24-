@@ -1,5 +1,5 @@
 #!/bin/bash
-# This is a script that outputs a random number for each die
+# This is a script that outputs a random number for each die and the sum of all the dice
 # The script should be executable by the user
 
 # Check if two arguments are passed and store them in variables
@@ -24,10 +24,18 @@ while [ $dice -le 1 ] || [ $sides -le 1 ]; do
   fi
 done
 
+# Initialize the sum variable to 0
+sum=0
+
 # Loop through the number of dice
 for (( i=1; i<=$dice; i++ )); do
   # Generate a random number between 1 and the number of sides using the $RANDOM variable and the modulo operator
   random=$(( $RANDOM % $sides + 1 ))
   # Print the output to the standard output stream
   echo "Die $i rolled a $random"
+  # Update the sum variable by adding the random number
+  sum=$(( $sum + $random ))
 done
+
+# Print the sum to the standard output stream
+echo "The sum of all the dice is $sum"
