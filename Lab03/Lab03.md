@@ -65,8 +65,12 @@ Step 6 completed
 
 6. I use this command at first `chmod +x roll.sh` to run the script and works fine and later switch to this command `chmod +x roll.sh` just now.
 
-7. The entities of user, group, and other are all endowed with the execute permission.
+7. The entities of user, group, and other are all endowed with the execute permission. It is obvious though...😇
 
 ## Extra Credit
 
 1. Note here *what* you did to the script for the extra credit.
+
+Extra credit answer: ![Extra credit completed](image-7.png)
+- This is a script that outputs a random number for each die and the sum of all the dice.
+- I already showed @aliAljaffer (Ali) and he approved the script for the extra credit.
