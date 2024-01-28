@@ -37,8 +37,7 @@ Verify that `roll` made it to your GitHub repository for this course and is in y
 
 4. ![Step 4 completed](image-3.png)
 
-5. ![Step 5 completed](image-4.png)
-or ![Step 5 completed](image-5.png)
+5. ![Step 5 completed](image-5.png)
 
 6. 
 
