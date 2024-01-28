@@ -29,15 +29,15 @@ Verify that `roll` made it to your GitHub repository for this course and is in y
 
 ## Part 3 - Retrospective Answers
 
-1. ![Step 1 answer completed](image.png)
+1. ![Step 1 completed](image.png)
 
-2. ![Step 2 answer completed](image-1.png)
+2. ![Step 2 completed](image-1.png)
 
 3. ![Step 3 completed](image-2.png)
 
 4. ![Step 4 completed](image-3.png)
 
-5. 
+5. ![Step 5 completed](image-4.png)
 
 
 ## Part 5 Answers
