@@ -47,18 +47,25 @@ Step 5 completed
 6. ![Step 6 completed](image-6.png)
 Step 6 completed
 
+7. Retrospective Answers
+- Sometimes, composing scripts can be arduous and vexing, particularly when confronting syntax errors, logic errors, or unforeseen outcomes.🥲 It is imperative that I'd to examine my scripts frequently and utilize debugging tools or techniques to pinpoint and rectify the errors.😤 Learning scripts was fun though. 😎
 
 ## Part 5 Answers
 
-1. PATH =
-2.
-3. Command:
-   - Full path:
-4. PATH =
-   - Difference:
-5.
-6.
-7.
+1. PATH = `/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local`
+2. Create a directory named `bin` in your home directory. You can use the `mkdir` command to create a directory. For instance, you can type `mkdir ~/bin` in your terminal. Overall result is this: `/home/user/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games`
+
+3. Command: `mkdir ~/bin`
+   - Full path: `/home/ubuntu/bin`
+
+4. PATH = `/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr`
+   - Difference: `/home/ubuntu/bin` is added to the beginning of the `PATH` environment variable...🤔
+
+5. `cp roll.sh ~/bin`
+
+6. I use this command at first `chmod +x roll.sh` to run the script and works fine and later switch to this command `chmod +x roll.sh` just now.
+
+7. The entities of user, group, and other are all endowed with the execute permission.
 
 ## Extra Credit
 
