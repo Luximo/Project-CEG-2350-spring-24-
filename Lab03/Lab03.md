@@ -44,7 +44,8 @@ Step 4 completed
 5. ![Step 5 completed](image-5.png)
 Step 5 completed
 
-6. 
+6. ![Step 6 completed](image-6.png)
+Step 6 completed
 
 
 ## Part 5 Answers
