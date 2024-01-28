@@ -30,14 +30,19 @@ Verify that `roll` made it to your GitHub repository for this course and is in y
 ## Part 3 - Retrospective Answers
 
 1. ![Step 1 completed](image.png)
+Step 1 completed
 
 2. ![Step 2 completed](image-1.png)
+Step 2 completed
 
 3. ![Step 3 completed](image-2.png)
+Step 3 completed
 
 4. ![Step 4 completed](image-3.png)
+Step 4 completed
 
 5. ![Step 5 completed](image-5.png)
+Step 5 completed
 
 6. 
 
