@@ -31,7 +31,8 @@ Verify that `roll` made it to your GitHub repository for this course and is in y
 
 1. ![Step 1 answer completed](image.png)
 
-2. 
+2. ![Step 2 answer completed](image-1.png)
+
 3. 
 
 ## Part 5 Answers
