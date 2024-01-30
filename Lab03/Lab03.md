@@ -63,7 +63,7 @@ Step 6 completed
 
 5. `cp roll.sh ~/bin`
 
-6. I use this command at first `chmod +x roll.sh` to run the script and works fine and later switch to this command `chmod +x roll.sh` just now.
+6. I use this command at first `chmod u+x roll.sh` to run the script and works fine and later switch to this command `chmod +x roll.sh` just now.
 
 7. The entities of user, group, and other are all endowed with the execute permission. It is obvious though...😇
 
