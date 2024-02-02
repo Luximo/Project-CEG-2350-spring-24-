@@ -7,6 +7,12 @@
 
 Make sure the following files are in your GitHub repository
 - validator (with commits for each step complete)
+
+1. ![Step 1 completed](image.png)
+step one completed
+
+2. 
+
 - `clean1.txt` through `clean4.txt`
 
 ## Part 2 Answers
