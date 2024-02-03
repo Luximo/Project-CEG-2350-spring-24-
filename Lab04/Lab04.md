@@ -8,7 +8,7 @@
 Make sure the following files are in your GitHub repository
 - validator (with commits for each step complete)
 
-1. ![Step 1 completed](image-4.png)
+1. ![Step 1 completed](image-5.png)
 step one completed
 
 2. ![Step 2 completed](image-3.png)
