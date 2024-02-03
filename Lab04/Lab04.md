@@ -11,7 +11,10 @@ Make sure the following files are in your GitHub repository
 1. ![Step 1 completed](image.png)
 step one completed
 
-2. 
+2. ![Step 2 completed](image-1.png)
+step two completed
+
+3. 
 
 - `clean1.txt` through `clean4.txt`
 
