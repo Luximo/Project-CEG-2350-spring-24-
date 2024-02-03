@@ -21,5 +21,8 @@ sort -u "$file" > clean1.txt
 # Match only entries that start with letters or digits
 grep -i '^[a-z0-9]' clean1.txt > clean2.txt
 
+# Remove entries that contain consecutive non-alphanumeric characters
+grep -v '[^a-z0-9]\{2,\}' clean2.txt > clean3.txt
+
 # Print a success message
-echo "The file $file has been sorted, deduplicated, and filtered. The output is in clean2.txt."
+echo "The file $file has been sorted, deduplicated, filtered, and cleaned. The output is in clean3.txt."
