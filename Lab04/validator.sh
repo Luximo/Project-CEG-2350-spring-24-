@@ -18,5 +18,8 @@ fi
 # Sort the file content and remove duplicate entries
 sort -u "$filename" > clean1.txt
 
+# Match only entries that start with a combination of letters or digits
+grep -i '^[a-z0-9]' clean1.txt > clean2.txt
+
 # Print a success message
-echo "File $filename has been sorted and deduplicated. Output saved to clean1.txt"
+echo "File $filename has been sorted, deduplicated, and filtered. Output saved to clean2.txt"
