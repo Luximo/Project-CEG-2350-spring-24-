@@ -25,23 +25,34 @@ step two completed
 1. `sed -e 's/<[/][^>]*>//g' sedfile.html > sedfile.md`
 ![part 1 completed](image-8.png)
 
-2. `so that they are pretty and readable in markdown`
+2. `sed -i -e 's/<li>/- /g' sedfile.md`
+![step 2 completed](image-10.png)
 
-3. `replace these examples with your commands`
+3. `sed -i -e 's/<h1>/# /g' sedfile.md`
+![step 3 completed](image-11.png)
 
-4. `do this for rest of commands in lab`
+4. `sed -i -e 's/<h2>/## /g' sedfile.md`
+![Step 4 completed](image-12.png)
 
-5. ` `
+5. `sed -i -e '/<[^>]*>/d' sedfile.md`
+![Step 5 completed](image-13.png)
 
-6. ` `
+6. `sed -i -e 's/Batches/Matches/g' sedfile.md`
+![Step 6 completed](image-14.png)
 
 ## Part 3 Answers
 
-1.
-2.
-3.
-4.
-5.
+1. `awk '/Bil/ {print $1}' records.txt`
+
+
+2. ` `
+
+3. ` `
+
+4. ` `
+
+5. ` `
+
 
 ## Extra Credit - Remove this if not doing
 
