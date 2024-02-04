@@ -14,7 +14,9 @@ step one completed
 2. ![Step 2 completed](image-3.png)
 step two completed
 
-3. 
+3. ![Step 3 completed](image-6.png)
+
+4. ![Step 4 completed](image-7.png)
 
 - `clean1.txt` through `clean4.txt`
 
