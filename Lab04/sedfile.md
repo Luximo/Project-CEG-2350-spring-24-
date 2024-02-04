@@ -1,5 +1,5 @@
 <html>
-<h1>Regex cheat sheet
+# Regex cheat sheet
 
 <h2>Special characters
 <ul>
