@@ -247,3 +247,4 @@ user@company.org
 
 
 3. Verify `validator2` is in your GitHub repository
+![Step 3 completed](image-21.png)
