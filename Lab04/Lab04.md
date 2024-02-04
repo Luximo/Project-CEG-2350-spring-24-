@@ -22,12 +22,18 @@ step two completed
 
 ## Part 2 Answers
 
-1. `place your sed commands between backtick characters`
+1. `sed -e 's/<[/][^>]*>//g' sedfile.html > sedfile.md`
+![part 1 completed](image-8.png)
+
 2. `so that they are pretty and readable in markdown`
+
 3. `replace these examples with your commands`
+
 4. `do this for rest of commands in lab`
-5.
-6. 
+
+5. ` `
+
+6. ` `
 
 ## Part 3 Answers
 
