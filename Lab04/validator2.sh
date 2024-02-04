@@ -9,7 +9,7 @@ regex=$(cat regex.txt)
 input_file=$1
 
 # the output file name
-output_file="validemails.txt"
+output_file="Updatedvalidemails.txt"
 
 # check if the input file exists and is readable
 if [ ! -f "$input_file" ] || [ ! -r "$input_file" ]; then
