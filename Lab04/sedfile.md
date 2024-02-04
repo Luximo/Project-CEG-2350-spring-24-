@@ -1,8 +1,6 @@
-<html>
 # Regex cheat sheet
 
 ## Special characters
-<ul>
     - \ = Indicates that the following character should be treated specially, or "escaped"
     - ^ = Batches the beginning of input
     - $ = Batches the end of input
@@ -13,7 +11,6 @@
 
 ## Character classes
 
-<ul>
     - \w = Batches any alphanumeric character from the basic Latin alphabet, including the underscore. Equivalent to [A-Za-z0-9_]
     - \W = Batches any character that is not a word character from the basic Latin alphabet. Equivalent to [^A-Za-z0-9_]
     - \d = Batches any digit (Arabic numeral). Equivalent to [0-9]
