@@ -1,7 +1,7 @@
 <html>
 # Regex cheat sheet
 
-<h2>Special characters
+## Special characters
 <ul>
     - \ = Indicates that the following character should be treated specially, or "escaped"
     - ^ = Batches the beginning of input
@@ -11,7 +11,7 @@
     - x? = Batches the preceding item "x" 0 or 1 times
 
 
-<h2>Character classes
+## Character classes
 
 <ul>
     - \w = Batches any alphanumeric character from the basic Latin alphabet, including the underscore. Equivalent to [A-Za-z0-9_]
