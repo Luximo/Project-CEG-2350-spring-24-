@@ -7,6 +7,7 @@
 
 Make sure the following files are in your GitHub repository
 - validator (with commits for each step complete)
+- `clean1.txt` through `clean4.txt`
 
 1. ![Step 1 completed](image-5.png)
 (step one completed)
@@ -20,157 +21,6 @@ Make sure the following files are in your GitHub repository
 4. ![Step 4 completed](image-7.png)
 (step four completed)
 
-- `clean1.txt` through `clean4.txt`
-
-- `clean1.txt file😎`
-```
-#_#@happy.face
-#bringit@bomb.com
-$$$bills@money.want
-123john.doe@example.com
-123user@example.com
-9876user@example.net
-?hello@gmail.com
-admin@123.456
-admin@website.com
-alice smith@example.com 
-alice.smith@example.com
-alice_smith123@company.org
-bob&jones@example.com 
-bob..smith@example.net
-bob_jones@example.com
-charlie_brown@peanuts.com
-chris.anderson@example..com 
-chris.anderson@example.com
-david.miller@ example.com 
-david.miller@example.com
-emily.white@example.com
-emily@white@example.com 
-invalid-email.com
-invalid-email@.com
-jennifer.brown@ example .com 
-jennifer.brown@example.com
-jenny.smith@123.co.uk
-john.doe@example 
-john.doe@example.com
-johndoe@company
-lisa.johnson@ 
-lisa.johnson@example.com
-mark.wilson@example,com 
-mark.wilson@example.com
-mike_tyson@boxing
-sarah.connor@gmail.com
-sarah.jackson@.com 
-sarah.jackson@example.com
-support@company
-support@company.org
-user123@example.co.uk
-user@company..org
-user@company.org
-```
-
-
-- `clean2.txt file😎`
-```
-123john.doe@example.com
-123user@example.com
-9876user@example.net
-admin@123.456
-admin@website.com
-alice smith@example.com 
-alice.smith@example.com
-alice_smith123@company.org
-bob&jones@example.com 
-bob..smith@example.net
-bob_jones@example.com
-charlie_brown@peanuts.com
-chris.anderson@example..com 
-chris.anderson@example.com
-david.miller@ example.com 
-david.miller@example.com
-emily.white@example.com
-emily@white@example.com 
-invalid-email.com
-invalid-email@.com
-jennifer.brown@ example .com 
-jennifer.brown@example.com
-jenny.smith@123.co.uk
-john.doe@example 
-john.doe@example.com
-johndoe@company
-lisa.johnson@ 
-lisa.johnson@example.com
-mark.wilson@example,com 
-mark.wilson@example.com
-mike_tyson@boxing
-sarah.connor@gmail.com
-sarah.jackson@.com 
-sarah.jackson@example.com
-support@company
-support@company.org
-user123@example.co.uk
-user@company..org
-user@company.org
-```
-
-
-- `clean3.txt file😎`
-```
-123john.doe@example.com
-123user@example.com
-9876user@example.net
-admin@123.456
-admin@website.com
-alice smith@example.com 
-alice.smith@example.com
-alice_smith123@company.org
-bob&jones@example.com 
-bob_jones@example.com
-charlie_brown@peanuts.com
-chris.anderson@example.com
-david.miller@example.com
-emily.white@example.com
-emily@white@example.com 
-invalid-email.com
-jennifer.brown@example.com
-jenny.smith@123.co.uk
-john.doe@example 
-john.doe@example.com
-johndoe@company
-lisa.johnson@example.com
-mark.wilson@example,com 
-mark.wilson@example.com
-mike_tyson@boxing
-sarah.connor@gmail.com
-sarah.jackson@example.com
-support@company
-support@company.org
-user123@example.co.uk
-user@company.org
-```
-
-- `clean4.txt file😎`
-```
-123john.doe@example.com
-123user@example.com
-9876user@example.net
-admin@website.com
-alice.smith@example.com
-alice_smith123@company.org
-bob_jones@example.com
-charlie_brown@peanuts.com
-chris.anderson@example.com
-david.miller@example.com
-emily.white@example.com
-jennifer.brown@example.com
-john.doe@example.com
-lisa.johnson@example.com
-mark.wilson@example.com
-sarah.connor@gmail.com
-sarah.jackson@example.com
-support@company.org
-user@company.org
-```
 
 ## Part 2 Answers
 
@@ -248,3 +98,4 @@ user@company.org
 
 3. Verify `validator2` is in your GitHub repository
 ![Step 3 completed](image-21.png)
+(@aliAljaffer) has approved this for the extra credit...😎
