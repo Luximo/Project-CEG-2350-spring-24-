@@ -6,3 +6,27 @@ printHelp() {
   echo " -f The text to find in the filename"
   echo " -r The replacement text for the new filename"
 }
+
+# Define the OPTSTRING
+OPTSTRING=":hf:r:"
+
+# Loop through the options using getopts
+while getopts $OPTSTRING opt; do
+  case $opt in
+    h) # If the option is -h, call printHelp and exit
+      printHelp
+      exit 0
+      ;;
+    f) # If the option is -f, save the argument as find
+      find=$OPTARG
+      ;;
+    r) # If the option is -r, save the argument as replace
+      replace=$OPTARG
+      ;;
+    \?) # If the option is not part of the OPTSTRING, call printHelp and exit
+      echo "Invalid option: -$OPTARG" >&2
+      printHelp
+      exit 1
+      ;;
+  esac
+done
