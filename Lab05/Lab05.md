@@ -24,39 +24,59 @@
 
 ## Part 3 - namechange Usage Guide
 
-THIS SHOULD ALL BE REMOVED AND REPLACED WITH ONLY YOUR USAGE GUIDE TEXT
-
-Examples of script usage and output. This should be enough info that  
-you can hand this and the script to someone not in this course and they  
-would be able to understand what your script does and how to use it.
-
-Use good markdown so that this documentation is pretty and clean on GitHub.
-
-Bellow is kind of how I would format things
+NAMECHANGE SCRIPT (namechange.sh)
 
 ### What it is
 
-Describe your script in plain english, nothing too technical.  Think about this as describing what you made over the dinner table.
+- Namechange (`namechange.sh`) is a script that helps you rename files on your PC. It lets you specify a pattern of text that you want to find in the file name and a pattern of text that you want to replace it with. For example, you can use it to change the spaces in a file name to dashes or to correct a spelling mistake...
 
 ### How to run it
 
-If someone wanted to downloaded your script, what steps would they take to have their own copy that they could run
-1. Numbers followed by a space
-2. Create numeric lists
-3. Don't forget `code snips` can go in backticks.
+To use the script, you need to open a terminal window and type the following command:
+
+1. `bash namechange -f find -r replace filename`
+- where `find` is the text that you want to find in the `file name`, `replace` is the text that you want to replace it with, and `filename` is the name of the file that you want to rename.
+
+2. For example, if you have a file named “`1-pic.jgp`” and you want to rename it to "`1-pic.jpg`”, you can type the following command:
+
+-  `bash namechange.sh -f "jgp" -r "jpg" 1-pic.jgp`
+
+- This will replace the wrong pattern (“`jgp`”) with the correct pattern (“`jpg`”) in the file name.
+
+3. The script will then rename the file and print a message to confirm the change. For example, it will say:
+
+- Renamed "`1-pic.jgp`" to `1-pic.jpg`
+
+4. If the script cannot find the pattern in the file name, or if the file does not exist, it will print an error message and exit. For example, it will say:
+
+- `User must provide valid filename`
+or
+- No changes made to "`1-pic.jgp`"
+
+5. The script also has a help option that you can use to see the usage and description of what the script can do for you whenever you're stuck or something else. To use the help option, you can type the following command:
+
+- `bash namechange.sh -h`
+
+- This will print the following message:
+
+```Usage: namechange -f find -r replace filename
+ -f The text to find in the filename`
+ -r The replacement text for the new filename
+ ```
+6. Finally, that’s how the script works. It helps you rename files on your computer by finding and replacing patterns of text in the file name. Easy right...?😇 *don't worry, I know...🫱🏾‍🫲🏼*
 
 ### Examples
 
 ```
-Two examples using your script to rename an existing file
-By using the triple quotes, you can enclose a block of code
-And code blocks look very professional
+$  bash namechange.sh -f "jgp" -r "jpg" 1-pic.jgp 
+Renamed "1-pic.jgp" to 1-pic.jpg
+
+$ bash namechange.sh -f "jgp" -r "jpg" 2-pic.jgp
+Renamed "2-pic.jgp" to 2-pic.jpg
+
+![some examples of the script in action](image.png)
+(some examples of the script in action with errors included)
 ```
 
 ## bulkrenamer Usage Guide - Remove if not doing extra credit
 
-Examples of script usage and output. This should be enough info that  
-you can hand this and the script to someone not in this course and they  
-would be able to understand what your script does and how to use it.
-
-Use good markdown so that this documentation it is pretty and clean on GitHub.
