@@ -49,3 +49,10 @@ if [ ! -f "$1" ]; then
   printHelp
   exit 3
 fi
+
+# Use sed with the -E option to find and replace the pattern in the filename
+# The -E option enables extended regular expressions
+# The -i option edits the file in place
+# The s command substitutes the find pattern with the replace pattern
+# The g flag replaces all occurrences of the pattern
+sed -E -i "s/$find/$replace/g" "$1"
