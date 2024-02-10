@@ -1,7 +1,7 @@
 # Define a function called printHelp
 printHelp() {
   # Print the usage message
-  echo "Usage: namechange -f find -r replace \"string to modify\""
+  echo "Usage: namechange -f find -r replace filename"
   # Print the description of the options
   echo " -f The text to find in the filename"
   echo " -r The replacement text for the new filename"
@@ -50,9 +50,23 @@ if [ ! -f "$1" ]; then
   exit 3
 fi
 
+# Store the old file name in a variable
+old_file="$1"
+
 # Use sed with the -E option to find and replace the pattern in the filename
 # The -E option enables extended regular expressions
-# The -i option edits the file in place
 # The s command substitutes the find pattern with the replace pattern
 # The g flag replaces all occurrences of the pattern
-sed -E -i "s/$find/$replace/g" "$1"
+# The p flag prints the result
+# The -n option suppresses the default output
+new_file=$(sed -E -n "s/$find/$replace/gp" <<< "$old_file")
+
+# Check if the new file name is different from the old file name
+if [ "$new_file" != "$old_file" ]; then
+  # If yes, rename the file and print a message
+  mv "$old_file" "$new_file"
+  echo "Renamed \"$old_file\" to $new_file"
+else
+  # If no, print a message
+  echo "No changes made to \"$old_file\""
+fi
