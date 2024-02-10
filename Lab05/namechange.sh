@@ -30,3 +30,22 @@ while getopts $OPTSTRING opt; do
       ;;
   esac
 done
+
+# Shift the positional parameters to get the filename
+shift $((OPTIND-1))
+
+# Check if the filename was provided
+if [ -z "$1" ]; then
+  # If not, output an error message, call printHelp and exit
+  echo "User must provide valid filename" >&2
+  printHelp
+  exit 2
+fi
+
+# Check if the filename exists
+if [ ! -f "$1" ]; then
+  # If not, output an error message, call printHelp and exit
+  echo "User must provide valid filename" >&2
+  printHelp
+  exit 3
+fi
