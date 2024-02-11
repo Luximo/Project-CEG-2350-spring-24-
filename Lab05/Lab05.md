@@ -73,10 +73,82 @@ Renamed "1-pic.jgp" to 1-pic.jpg
 
 $ bash namechange.sh -f "jgp" -r "jpg" 2-pic.jgp
 Renamed "2-pic.jgp" to 2-pic.jpg
-
+```
 ![some examples of the script in action](image.png)
 (some examples of the script in action with errors included)
+
+## bulkrenamer Usage Guide
+
+BULKRENAMER SCRIPT (bulkrenamer.sh)
+
+### What it is
+
+- Bulkrenamer (`bulkrenamer.sh`) is a script that helps you rename many files on your computer at once. It lets you specify a pattern of text that you want to find in the file names and a pattern of text that you want to replace it with. For example, you can use it to change the spaces in all the file names to dashes or to correct a spelling mistake in all the file names...
+
+### How to run it
+
+To use the script, you need to open a terminal window and type the following command:
+
+1. `bash bulkrename.sh -f '"find"' -r '"replace"'`
+
+- where `find` is the text that you want to find in the file names, and `replace` is the text that you want to replace it with.
+
+2. For example, if you have many files that have spaces in their names, such as “`1 file name.txt`”, “`2 file name.txt`”, and “`3 file name.txt`”, and you want to rename them to have dashes instead of spaces, such as “`1-file-name.txt`”, “`2-file-name.txt`”, and “`3-file-name.txt`”, you can type the following command:
+
+- `bash bulkrename.sh -f "\s" -r "-"`
+
+- This will replace the space pattern (“`\s`”) with the dash pattern (“`-`”) in all the file names.
+
+3. The script will then rename all the files and print a message to confirm the changes. For example, it will say:
+- 
+```Renamed "1 file name.txt" to 1-file-name.txt
+   Renamed "2 file name.txt" to 2-file-name.txt
+   Renamed "3 file name.txt" to 3-file-name.txt
 ```
 
-## bulkrenamer Usage Guide - Remove if not doing extra credit
+4. If the script cannot find the pattern in any of the file names, it will print a message and exit. For example, it will say:
 
+- `No changes made to any files`
+
+5. The script also has a help option that you can use to see the usage and description of the script. To use the help option, you can type the following command:
+
+- `bash bulkrenamer.sh -h`
+
+6. This will print the following message:
+
+```
+ -f The text to find in the filenames
+ -r The replacement text for the new filenames
+ ```
+
+7. That’s how the script works. It helps you rename many files on your computer at once by finding and replacing patterns of text in the file names. Easy right…?😇 *again..., I know…🫱🏾‍🫲🏼*
+
+
+
+### Examples
+
+```
+$ bash bulkrename.sh -f "jgp" -r "jpg" *
+Renamed "1-pic.jgp" to 1-pic.jpg
+Renamed "2-pic.jgp" to 2-pic.jpg
+Renamed "3-pic.jgp" to 3-pic.jpg
+Renamed "4-pic.jgp" to 4-pic.jpg
+Renamed "5-pic.jgp" to 5-pic.jpg
+Renamed "6-pic.jgp" to 6-pic.jpg
+Renamed "7-pic.jgp" to 7-pic.jpg
+Renamed "8-pic.jgp" to 8-pic.jpg
+Renamed "9-pic.jgp" to 9-pic.jpg
+Renamed "10-pic.jgp" to 10-pic.jpg
+
+$ bash bulkrename.sh -f "foo" -r "bar" *
+Renamed "1-foo.txt" to 1-bar.txt
+Renamed "2-foo.txt" to 2-bar.txt
+Renamed "3-foo.txt" to 3-bar.txt
+Renamed "4-foo.txt" to 4-bar.txt
+Renamed "5-foo.txt" to 5-bar.txt
+Renamed "6-foo.txt" to 6-bar.txt
+Renamed "7-foo.txt" to 7-bar.txt
+Renamed "8-foo.txt" to 8-bar.txt
+Renamed "9-foo.txt" to 9-bar.txt
+Renamed "10-foo.txt" to 10-bar.txt
+```

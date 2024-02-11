@@ -3,7 +3,7 @@
 # Define a function called printHelp
 printHelp() {
   # Print the usage message
-	echo "Usage: ./bulkrename.sh -f '"find"' -r '"replace""
+	echo "Usage: bulkrenamer.sh -f '"find"' -r '"replace""
  	# Print the description of the options
  	echo "-f The text to find in the filenames"
  	echo "-r The replacement text for the new filenames"
