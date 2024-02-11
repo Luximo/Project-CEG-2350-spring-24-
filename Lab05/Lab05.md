@@ -89,13 +89,13 @@ BULKRENAMER SCRIPT (bulkrenamer.sh)
 
 To use the script, you need to open a terminal window and type the following command:
 
-1. `bash bulkrename.sh -f '"find"' -r '"replace"'`
+1. `bash bulkrenamer.sh -f '"find"' -r '"replace"'`
 
 - where `find` is the text that you want to find in the file names, and `replace` is the text that you want to replace it with.
 
 2. For example, if you have many files that have spaces in their names, such as “`1 file name.txt`”, “`2 file name.txt`”, and “`3 file name.txt`”, and you want to rename them to have dashes instead of spaces, such as “`1-file-name.txt`”, “`2-file-name.txt`”, and “`3-file-name.txt`”, you can type the following command:
 
-- `bash bulkrename.sh -f "\s" -r "-"`
+- `bash bulkrenamer.sh -f "\s" -r "-"`
 
 - This will replace the space pattern (“`\s`”) with the dash pattern (“`-`”) in all the file names.
 
@@ -128,7 +128,7 @@ To use the script, you need to open a terminal window and type the following com
 ### Examples
 
 ```
-$ bash bulkrename.sh -f "jgp" -r "jpg" *
+$ bash bulkrenamer.sh -f "jgp" -r "jpg" *
 Renamed "1-pic.jgp" to 1-pic.jpg
 Renamed "2-pic.jgp" to 2-pic.jpg
 Renamed "3-pic.jgp" to 3-pic.jpg
@@ -140,7 +140,7 @@ Renamed "8-pic.jgp" to 8-pic.jpg
 Renamed "9-pic.jgp" to 9-pic.jpg
 Renamed "10-pic.jgp" to 10-pic.jpg
 
-$ bash bulkrename.sh -f "foo" -r "bar" *
+$ bash bulkrenamer.sh -f "foo" -r "bar" *
 Renamed "1-foo.txt" to 1-bar.txt
 Renamed "2-foo.txt" to 2-bar.txt
 Renamed "3-foo.txt" to 3-bar.txt
@@ -152,3 +152,6 @@ Renamed "8-foo.txt" to 8-bar.txt
 Renamed "9-foo.txt" to 9-bar.txt
 Renamed "10-foo.txt" to 10-bar.txt
 ```
+
+8. ![some examples of the script in action](image-1.png)
+(some examples of the script in action)
