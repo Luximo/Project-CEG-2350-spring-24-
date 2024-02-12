@@ -51,7 +51,7 @@ To use the script, you need to open a terminal window and type the following com
 
 - `User must provide valid filename`
 or
-- No changes made to "`1-pic.jgp`"
+- `No changes made to "1-pic.jgp"`
 
 5. The script also has a help option that you can use to see the usage and description of what the script can do for you whenever you're stuck or something else. To use the help option, you can type the following command:
 

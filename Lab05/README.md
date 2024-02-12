@@ -1,6 +1,24 @@
 ### Namechange
 - Namechange (`namechange.sh`) is a script that helps you rename files on your PC. It lets you specify a pattern of text that you want to find in the file name and a pattern of text that you want to replace it with. For example, you can use it to change the spaces in a file name to dashes or to correct a spelling mistake...
 
+### Table of Contents
+
+- [Namechange](#Namechange)
+    - [Table of Contents](#table-of-contents)
+    - [Features](#features)
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [Support](#support)
+    - [Roadmap](#roadmap)
+    - [License](#license)
+    - [Dependencies](#dependencies)
+    - [Contributors](#contributors)
+    - [FAQ](#faq)
+        - [How do I use extended regular expressions for the find and replace patterns...?](#how-do-I-use-extended-regular-expressions-for-the-find-and-replace-patterns...?)
+        - [How do I escape special characters in the find and replace patterns...?](#how-do-I-escape-special-characters-in-the-find-and-replace-patterns...?)
+        - [How do I rename multiple files at once with the same find and replace patterns...?](#how-do-I-rename-multiple-files-with-the-same-find-and-replace-patterns...?)
+        - [How do I undo the changes made by the script...?](#how-do-I-undo-the-changes-made-by-the-script...?)
+
 ### Features
 - Supports extended regular expressions for the find and replace patterns
 - Checks if the file name was provided and if the file exists
@@ -34,7 +52,7 @@
 
 - `User must provide valid filename`
 or
-- No changes made to "`1-pic.jgp`"
+- `No changes made to "1-pic.jgp"`
 
 5. The script also has a help option that you can use to see the usage and description of what the script can do for you whenever you're stuck or something else. To use the help option, you can type the following command:
 
@@ -62,3 +80,34 @@ or
 
 ### License
 - The script is licensed under the MIT License. See the LICENSE file for more information.
+
+### Dependencies
+- The script does not have any external dependencies. It only uses the built-in commands and tools of the bash shell, such as getopts, sed, and mv as required.
+
+### Contributors
+- The script was created by me, Moses Otuvedo, as a class lab project. I welcome any feedback, suggestions, or contributions from other users. You can reach me at otuvedo.3@wright.edu or on GitHub.
+
+### FAQ
+- Here are some frequently asked questions and answers about the script:
+
+- Q: How do I use extended regular expressions for the find and replace patterns...?
+  A: You can use any valid regular expression syntax that is supported by the sed command with the -E option. For example, you can use quantifiers, character classes, alternation, grouping, and backreferences.
+
+- Q: How do I escape special characters in the find and replace patterns...?
+  A: You can use a backslash `()` to escape any special characters that have a meaning in regular expressions or bash, such as `/, &, $, *, ?, etc.` For example, if you want to find and replace the literal text “`/foo/bar`”, you can use the following command:
+
+  `bash namechange -f "\/foo\/bar" -r "baz" filename`
+
+- Q: How do I rename multiple files at once with the same find and replace patterns...?
+  A: You can use a loop or a glob pattern to pass multiple file names to the script. For example, if you want to rename all the files in the current directory that have the extension .txt, you can use the following command:
+
+  `for file in *.txt; do bash namechange -f find -r replace "$file"; done`
+
+or
+
+  `bash namechange -f find -r replace *.txt`
+
+- Q: How do I undo the changes made by the script...?
+  A: The script does not have an undo option, so you need to be careful before renaming any files. However, if you make a mistake, you can try to reverse the find and replace patterns and run the script again. For example, if you renamed “`hello world.md`” to “`hello-world.md`”, you can try to rename it back with the following command:
+
+  `bash namechange -f "-" -r "\s" "hello-world.md"`
