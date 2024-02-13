@@ -65,6 +65,8 @@ or
  ```
 6. Finally, that’s how the script works. It helps you rename files on your computer by finding and replacing patterns of text in the file name. Easy right...?😇 *don't worry, I know...🫱🏾‍🫲🏼*
 
+[Full guide](./README.md)
+
 ### Examples
 
 ```
