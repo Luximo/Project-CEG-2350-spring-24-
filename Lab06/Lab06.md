@@ -33,7 +33,7 @@
     - BIOS or UEFI version: `LENOVO O4MKT29A, 04/01/22`
     - How to access your BIOS / UEFI: 
         - Open the Settings app by pressing `Windows key + I.`
-        - Go to `System` > `Recovery.`
+        - Go to `System` then `Recovery.`
         - Under `Advanced startup`, click `Restart now.`
         - After my PC restarts, click `Troubleshoot` then `Advanced options` then `UEFI Firmware Settings.`
         - Click `Restart` to reboot into my BIOS or UEFI firmware settings.
@@ -43,6 +43,6 @@
 
 ## Extra Credit - VM Manager
 
-- VM Manager software installed: 
+- VM Manager software installed: `VirtualBox 7.0`
 - ![Proof of my VM ware installed](image.png)
 - ![Proof of my VM ware installed](image-1.png)
