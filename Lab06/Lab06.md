@@ -32,11 +32,11 @@
 6. BIOS / UEFI info: 
     - BIOS or UEFI version: `LENOVO O4MKT29A, 04/01/22`
     - How to access your BIOS / UEFI: 
-                                    - Open the Settings app by pressing `Windows key + I.`
-                                    - Go to `System` > `Recovery.`
-                                    - Under `Advanced startup`, click `Restart now.`
-                                    - After my PC restarts, click `Troubleshoot` then `Advanced options` then `UEFI Firmware Settings.`
-                                    - Click `Restart` to reboot into my BIOS or UEFI firmware settings.
+        - Open the Settings app by pressing `Windows key + I.`
+        - Go to `System` > `Recovery.`
+        - Under `Advanced startup`, click `Restart now.`
+        - After my PC restarts, click `Troubleshoot` then `Advanced options` then `UEFI Firmware Settings.`
+        - Click `Restart` to reboot into my BIOS or UEFI firmware settings.
 
 7. Bootloader running on your system: `LENOVO O4MKT29A, 04/01/22`
 8. Kernel version of your operating system: `10.0.22621.2506`
