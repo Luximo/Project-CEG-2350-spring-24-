@@ -50,7 +50,7 @@
 7. Kernel / OS info:
     - Bootloader software on your system: `Windows Boot Manager`
     - Kernel version of your operating system: `10.0.22621.2506`
-    - Operating System name & version: `Windows 11 Pro`
+    - Operating System name & version: `Windows 11 Pro & version 23H2`
 
 ## Part 2 - Virtualize the Machine
 
