@@ -24,6 +24,14 @@
     - Disk 1 manufacturer and model: `WD_BLACK SN850X HS 2000GB`
     - Total disk 1 size (in GB): `2 TB`
 
+    - Disk 2 type: `SSD`
+    - Disk 2 manufacturer and model: `WD_BLACK SN850X HS 2000GB`
+    - Total disk 2 size (in GB): `2 TB`
+
+    - Disk 3 type: `SSD`
+    - Disk 3 manufacturer and model: `WD_BLACK SN850X HS 2000GB`
+    - Total disk 3 size (in GB): `2 TB`
+
 5. Primary partition info:
     - Primary partition mount point: `C: drive`
     - Remaining space on primary partition (in GB): `205 GB`
