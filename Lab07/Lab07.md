@@ -258,7 +258,22 @@ newworld1  newworld12  newworld13  test1.txt
 
 ## Extra Credit Answers:
 
-1. Commands used: 
+1. Commands used: `dd if=/dev/zero of=~/vm-disk.img bs=1M count=2048`
+
 2. Explanation: 
-3. Commands used: 
+- The `dd` command is a low-level utility that can copy data from one location to another. In this case, it's being used to create a file of a specified size by reading null characters from `/dev/zero` and writing them to the output file `~/vm-disk.img`. The `bs=1M` option sets the block size to `1 megabyte`, and `count=2048` tells dd to copy `2048 blocks`, resulting in a `2 GB` file.
+
+3. Commands used: `sudo mkfs.ext4 ~/vm-disk.img`
+- the `mkfs.ext4` command creates an `ext4 filesystem` on the specified file.
+
 4. Commands used: 
+```
+sudo mkdir -p /mnt/vfs
+sudo mount -o loop ~/vm-disk.img /mnt/vfs
+```
+- `mkdir -p /mnt/vfs` creates the mount point directory if it doesn’t already exist.
+- `mount -o loop` mounts the image file as a loop device, which allows a file to be treated as a block device.
+
+- Below is the image description of the commands used above:
+![Step a completed](image-16.png)
+![Step b completed](image-17.png)
