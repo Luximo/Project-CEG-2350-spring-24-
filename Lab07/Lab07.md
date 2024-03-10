@@ -75,7 +75,7 @@ cat /etc/fstab
 
 9. Fields & purpose of fields in entry that mount the root filesystem
 
-- The /etc/fstab file contains entries that define how disk partitions should be mounted into the filesystem. Here’s an explanation of the fields for the entry that mounts the root filesystem:
+- The `/etc/fstab` file contains entries that define how disk partitions should be mounted into the filesystem. Here’s an explanation of the fields for the entry that mounts the root filesystem:
 
    -  Device: `LABEL=cloudimg-rootfs` indicates that the device with the label `cloudimg-rootfs` is to be mounted.
    -  Mount Point: `/` signifies that this filesystem is mounted at the root directory.
