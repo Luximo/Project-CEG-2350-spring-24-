@@ -36,9 +36,12 @@ sudo parted /dev/xvda print all
 4. Command:
 ```
 sudo blkid /dev/xvda
+or
+sudo blkid -o list | grep '/dev/xvda*'
 
 ```
 ![Step 4 completed](image-3.png)
+![Step 4b completed](image-18.png)
 
 5. For the primary partition:
     - What partition is the root filesystem on?
@@ -159,11 +162,13 @@ The operation has completed successfully.
 1. Commands used: `sudo mkfs -t ext4 -L lux_fs /dev/xvdb1`
 ![step one completed](image-8.png)
 
-2. Commands used: `sudo mount /dev/xvdb1 /mnt/newworld`
+2. Commands used: `sudo blkid /dev/xvdb1`
 
-3. Commands used: `sudo mount /dev/xvdb1 /mnt/newworld`
+3. Commands used: `sudo mkdir /mnt/newworld`
 
-4. Contents of `/mnt/newworld`:
+4. Commands used: `sudo mount /dev/xvdb1 /mnt/newworld`
+
+5. Contents of `/mnt/newworld`:
 ```
 /mnt/newworld$ sudo vim test1.txt
 /mnt/newworld$ ls
@@ -171,15 +176,15 @@ newworld1  newworld12  newworld13  test1.txt
 ```
 ![step 4 completed](image-9.png)
 
-5. Commands used: `sudo umount /dev/xvdb1`
+6. Commands used: `sudo umount /dev/xvdb1`
 
-6. When can I interact with files on the filesystem on the partition in `xvdb`?
+7. When can I interact with files on the filesystem on the partition in `xvdb`?
    - Answer: 
-          - Created the partition, which I've done with `gdisk`
-          - Formatted the partition with a filesystem, which I’ve done with `mkfs -t ext4`
-          - Created a mount point, which I’ve done with `mkdir /mnt/newworld`
-          - Mounted the filesystem to the mount point, which I did with the command `sudo mount /dev/xvdb1 /mnt/newworld`
-          - Once the filesystem is mounted, you can start interacting with files on it, such as creating, editing, and deleting files and directories. Remember to unmount the filesystem with sudo umount /mnt/newworld when you’re done working with it to ensure all changes are written to disk and to prevent data corruption.
+    - Created the partition, which I've done with `gdisk`
+    - Formatted the partition with a filesystem, which I’ve done with `mkfs -t ext4`
+    - Created a mount point, which I’ve done with `mkdir /mnt/newworld`
+    - Mounted the filesystem to the mount point, which I did with the command `sudo mount /dev/xvdb1 /mnt/newworld`
+    - Once the filesystem is mounted, you can start interacting with files on it, such as creating, editing, and deleting files and directories. Remember to unmount the filesystem with sudo umount /mnt/newworld when you’re done working with it to ensure all changes are written to disk and to prevent data corruption.
    
 ## Part 4
 
@@ -234,7 +239,7 @@ newworld1  newworld12  newworld13  test1.txt
 ![Step 4 completed](image-10.png)
 
 5. Is the secret you deleted still showing up in the `strings` output?
-- Answer: yep, not deleted yet...
+- Answer: yep, not deleted yet...🥲 so sad...let's give it another shot...😇 too soon to give...
 ![step 5a completed](image-11.png)
 ![step 5b completed](image-12.png)
 ![step 5c completed](image-13.png)
