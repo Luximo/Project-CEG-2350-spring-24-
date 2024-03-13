@@ -179,7 +179,7 @@ newworld1  newworld12  newworld13  test1.txt
 6. Commands used: `sudo umount /dev/xvdb1`
 
 7. When can I interact with files on the filesystem on the partition in `xvdb`?
-   - Answer: 
+  - Answer: 
     - Created the partition, which I've done with `gdisk`
     - Formatted the partition with a filesystem, which I’ve done with `mkfs -t ext4`
     - Created a mount point, which I’ve done with `mkdir /mnt/newworld`
