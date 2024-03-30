@@ -6,6 +6,34 @@
 ## Part 1 - Compiling
 
 1. Method & command to get a copy of the source code files:
+    -   # Clone the repository
+        git clone --no-checkout https://github.com/pattonsgirl/CEG2350.git
+
+    -   # Navigate to the cloned directory
+        cd CEG2350
+
+    -   # Initialize sparse-checkout
+        git sparse-checkout init --cone
+
+    -   # Set the desired subdirectory to be checked out
+        git sparse-checkout set Labs/Lab09/TODO-C
+
+    -   # Checkout the files
+        git checkout
+
+    -   # Navigate to the Lab09 directory within your local repository
+        cd path/to/your/repository/Lab09
+
+    -   # Stage the new files for commit
+        git add .
+
+    -   # Commit the changes with a descriptive message
+        git commit -m "Added source code files from TODO-C"
+
+    -   # Push the changes to the remote repository
+        git push origin main
+
+
 2. Windows C / C++ compiler
    - Download Windows installer from:
    - Confirm installed in Windows:
