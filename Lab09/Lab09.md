@@ -40,19 +40,19 @@
 3. Linux C / C++ compiler
    - Download Linux installer from: `wget https://ftp.gnu.org/gnu/gcc/gcc-13.2.0/gcc-13.2.0.tar.gz`
 
-   -    tar -xzf gcc-13.2.0.tar.gz
-   -    cd gcc-13.2.0
-   -    ./contrib/download_prerequisites
-   -    mkdir build && cd build
-   -   ../configure --enable-languages=c,c++ --disable-multilib
+   -    `tar -xzf gcc-13.2.0.tar.gz`
+   -    `cd gcc-13.2.0`
+   -    `./contrib/download_prerequisites`
+   -    `mkdir build && cd build`
+   -    `../configure --enable-languages=c,c++ --disable-multilib`
    -    I encountered an error with running this command to  run the configure script, to fix this, I'd to run the command below:
-   -    sudo apt update
-   -    sudo apt install g++
-   -    ../configure --enable-languages=c,c++ --disable-multilib
-   -    make -j$(nproc)
-   -    sudo make install
-   -    gcc --version
-   -    g++ --version
+   -    `sudo apt update`
+   -    `sudo apt install g++`
+   -    `../configure --enable-languages=c,c++ --disable-multilib`
+   -    `make -j$(nproc)`
+   -    `sudo make install`
+   -    `gcc --version`
+   -    `g++ --version`
 
    - Confirm installed in Linux: 
    ```
@@ -73,17 +73,17 @@
 
 #### Program Description
 
-    The program is a simple command-line To-Do List application. Its purpose is to allow users to manage their tasks by adding new tasks, marking tasks as completed, removing tasks, and viewing the entire list of tasks.
+The program is a simple command-line To-Do List application. Its purpose is to allow users to manage their tasks by adding new tasks, marking tasks as completed, removing tasks, and viewing the entire list of tasks.
 
 
 #### How to Build and Run Program
 1.  Build the Program: To compile the source code into an executable, use the following command in the terminal:
-    `gcc -o todo main.c utility.c`
+-   `gcc -o todo main.c utility.c`
 
     This command will create an executable named `todo`.
 
 2.  Run the Program: To run the compiled program, execute the following command:
-    `./todo`
+-   `./todo`
 
     This will start the program and display the To-Do List menu.
 
@@ -95,7 +95,8 @@
     4.  View To-Do List
     5.  Exit
 
--   Enter the number corresponding to your choice and follow the on-screen prompts to manage your To-Do List.
+-   Enter the number corresponding to your choice and follow the on-screen prompts to manage your To-Do List like this below:
+
 ![Step 2a completed](image-1.png)
 ![Step 2b completed](image-2.png)
 
@@ -109,13 +110,13 @@ Add branch to remote if created locally (GitHub): `git push -u origin phantom/pr
 
 Steps to `merge` changes to another branch (`main`): 
 -   Switch to the branch you want to merge into main:
-        `git checkout main`
+-   `git checkout main`
 
 -   Merge the changes from the other branch in `phantom/project-bluestorm`:
-        `git merge phantom/project-bluestorm`
+-   `git merge phantom/project-bluestorm`
 
 -   Since there's no conflict, then run:
-        `git push origin main`
+-   `git push origin main`
 
 -   I encountered some conflicts here...
     ```
@@ -134,20 +135,20 @@ Steps to resolve a `merge` conflict:
 
 -   Edit the files to resolve the conflicts. I'd to merge the changes manually.
 
--   After resolving the conflicts, save the files and mark them as resolved by runnin this:
-    `git add main.c utility.c utility.h`
+-   After resolving the conflicts, save the files and mark them as resolved by running this:
+-   `git add main.c utility.c utility.h`
 
 -   Commit the Resolved Changes: 
-    `git commit -m "Resolved merge conflicts"` 
+-   `git commit -m "Resolved merge conflicts"` 
 
 -   Push the Resolved Changes:
-    `git push origin phantom/project-bluestorm`
+-   `git push origin phantom/project-bluestorm`
 
 -   On GitHub, I created pull requests for each branch that had the resolved changes
 
 -   After reviewing the pull requests, I merged them into the main branch on GitHub.
 
--   To ensure my local main branch is up to date, I pulled the latest changes:
+-   To ensure my local main branch is up-to-date, I pulled the latest changes:
     ```
         git checkout main
         git pull origin main
@@ -155,10 +156,10 @@ Steps to resolve a `merge` conflict:
     ```
 
 -   Navigate to the TODO-C directory:
-    `cd Lab09/TODO-C`
+-   `cd Lab09/TODO-C`
 
 -   Verify the Current Files:
-    `ls -a`
+-   `ls -a`
 ![Final steps](image-3.png)
 
 
