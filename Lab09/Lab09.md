@@ -45,7 +45,7 @@
    -    `./contrib/download_prerequisites`
    -    `mkdir build && cd build`
    -    `../configure --enable-languages=c,c++ --disable-multilib`
-   -    I encountered an error with running this command to  run the configure script, to fix this, I'd to run the command below:
+   -    I encountered an error with running this command to run the configure script, to fix this, I'd to run the command below:
    -    `sudo apt update`
    -    `sudo apt install g++`
    -    `../configure --enable-languages=c,c++ --disable-multilib`
@@ -112,13 +112,13 @@ Add branch to remote if created locally (GitHub): `git push -u origin phantom/pr
 
 Steps to `merge` changes to another branch (`main`): 
 -   Switch to the branch you want to merge into main:
--   `git checkout main`
+    -   `git checkout main`
 
 -   Merge the changes from the other branch in `phantom/project-bluestorm`:
--   `git merge phantom/project-bluestorm`
+    -   `git merge phantom/project-bluestorm`
 
 -   Since there's no conflict, then run:
--   `git push origin main`
+    -   `git push origin main`
 
 -   I encountered some conflicts here...
     ```
@@ -138,13 +138,13 @@ Steps to resolve a `merge` conflict:
 -   Edit the files to resolve the conflicts. I'd to merge the changes manually.
 
 -   After resolving the conflicts, save the files and mark them as resolved by running this:
--   `git add main.c utility.c utility.h`
+    -   `git add main.c utility.c utility.h`
 
 -   Commit the Resolved Changes: 
--   `git commit -m "Resolved merge conflicts"` 
+    -   `git commit -m "Resolved merge conflicts"` 
 
 -   Push the Resolved Changes:
--   `git push origin phantom/project-bluestorm`
+    -   `git push origin phantom/project-bluestorm`
 
 -   On GitHub, I created pull requests for each branch that had the resolved changes
 
@@ -158,10 +158,10 @@ Steps to resolve a `merge` conflict:
     ```
 
 -   Navigate to the TODO-C directory:
--   `cd Lab09/TODO-C`
+    -   `cd Lab09/TODO-C`
 
 -   Verify the Current Files:
--   `ls -a`
+    -   `ls -a`
 ![Final steps](image-3.png)
 
 
