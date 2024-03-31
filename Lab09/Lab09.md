@@ -60,6 +60,8 @@
     g++ --version
 
    ```
+![Step 3a completed](image-4.png)
+   
 4. Browser based compiler for C / C++: `https://paiza.io/en/languages/online-c-compiler`
 5. Command(s) to compile the source code into an executable program: 
     -   `gcc -o todo main.c utility.c`
