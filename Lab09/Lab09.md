@@ -169,9 +169,15 @@ Steps to resolve a `merge` conflict:
 
 Using `Makefile` to build executable: `make build`
 
+![Step 3a completed](image-5.png)
+
 Using `Makefile` to run program: `make run`
 
+![Step 3b completed](image-6.png)
+![Step 3c completed](image-7.png)
+
 Using `Makefile` to remove compilation files, such as the executable: `make clean`
+![Step 3d completed](image-8.png)
 
 ## Extra Credit - Ignore That
 
