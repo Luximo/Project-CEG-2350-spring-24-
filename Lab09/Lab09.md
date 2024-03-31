@@ -1,7 +1,7 @@
 ## Lab 09
 
-- Name:
-- Email:
+- Name: Moses Otuvedo
+- Email: Otuvedo.3@wright.edu
 
 ## Part 1 - Compiling
 
@@ -108,12 +108,63 @@ Change to branch: `git checkout phantom/project-bluestorm`
 Add branch to remote if created locally (GitHub): `git push -u origin phantom/project-bluestorm`
 
 Steps to `merge` changes to another branch (`main`): 
+-   Switch to the branch you want to merge into main:
+        `git checkout main`
+
+-   Merge the changes from the other branch in `phantom/project-bluestorm`:
+        `git merge phantom/project-bluestorm`
+
+-   Since there's no conflict, then run:
+        `git push origin main`
+
+-   I encountered some conflicts here...
+    ```
+        git fetch origin (Fetch the latest changes from GitHub first, my bad...🥲)
+
+        git merge origin/main
+
+        git push origin main
+    ```
 
 Steps to resolve a `merge` conflict: 
 
+-   Identify the files with conflicts which are comments I added to my c files.
+
+-   Open the conflicting files and look for the lines that Git has marked with <<<<<<<, =======, and >>>>>>>.
+
+-   Edit the files to resolve the conflicts. I'd to merge the changes manually.
+
+-   After resolving the conflicts, save the files and mark them as resolved by runnin this:
+    `git add main.c utility.c utility.h`
+
+-   Commit the Resolved Changes: 
+    `git commit -m "Resolved merge conflicts"` 
+
+-   Push the Resolved Changes:
+    `git push origin phantom/project-bluestorm`
+
+-   On GitHub, I created pull requests for each branch that had the resolved changes
+
+-   After reviewing the pull requests, I merged them into the main branch on GitHub.
+
+-   To ensure my local main branch is up to date, I pulled the latest changes:
+    ```
+        git checkout main
+        git pull origin main
+
+    ```
+
+-   Navigate to the TODO-C directory:
+    `cd Lab09/TODO-C`
+
+-   Verify the Current Files:
+    `ls -a`
+![Final steps](image-3.png)
+
+
 ## Part 3 - makey makey
 
-Using `Makefile` to build executable:
+Using `Makefile` to build executable: 
 
 Using `Makefile` to run program:
 
