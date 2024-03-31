@@ -164,11 +164,11 @@ Steps to resolve a `merge` conflict:
 
 ## Part 3 - makey makey
 
-Using `Makefile` to build executable: 
+Using `Makefile` to build executable: `make build`
 
-Using `Makefile` to run program:
+Using `Makefile` to run program: `make run`
 
-Using `Makefile` to remove compilation files, such as the executable: 
+Using `Makefile` to remove compilation files, such as the executable: `make clean`
 
 ## Extra Credit - Ignore That
 
