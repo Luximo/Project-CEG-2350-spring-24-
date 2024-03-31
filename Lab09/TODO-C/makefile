@@ -23,7 +23,7 @@ run: build
 
 # Clean target
 clean:
-	rm -f $(EXEC) $(OBJ)
+	rm -f todo todo.exe $(OBJ)
 
 # Rule for object files
 %.o: %.c
