@@ -3,3 +3,10 @@
 *.out
 *.o
 todo
+.class
+_pycache_
+
+*.i
+*.o
+*.s
+orphan
