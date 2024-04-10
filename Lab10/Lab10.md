@@ -37,7 +37,7 @@
 
 ## Part 2 - Network Info
 
-### Network Info for <Windows 11>
+### Network Info for Windows 11
 
 1. Hostname of the device: `hostname`
     -   ![step 2a](image.png)
