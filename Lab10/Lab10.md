@@ -119,11 +119,13 @@ Translate the below IP ranges to their CIDR notation subnets:
 ## Part 4 - Security
 
 Screenshot of your changed Inbound Security Group rules.  
-![Inbound Rules for Lab 10](relative/path/to/image)
+<!-- ![Inbound Rules for Lab 10](relative/path/to/image) -->
 
 1. Remove the two default rules:
     -   ![step 4](image-17.png)
-    - After updating the security group rules, I couldn't connect to my instance, so I'd to add back the default rules and try to connect again and it works fine...
+    - After updating the security group rules, I couldn't connect to my instance
+    -   ![step 4d](image-22.png)
+    -   So I'd to add back the default rules and try to connect again, and it works fine now like this...
     -   ![step 4b](image-18.png)
     -   ![step 4c](image-19.png)
 
@@ -134,24 +136,28 @@ Screenshot of your changed Inbound Security Group rules.
 
 ### IPv4 Source Report
 
-| Rank  | IPv4 Address | # of Attempts |
-| ----- | ------------ | ------------- |
-| 1     |              |     |
-| 2     |              |     |
-| 3     |              |     |
-| 4     |              |     |
-| 5     |              |     |
+| Rank | IPv4 Address    | # of Attempts |
+|------|-----------------|---------------|
+| 1    | 205.185.122.211 | 204           |
+| 2    | 205.185.123.156 | 86            |
+| 3    | 209.141.61.58   | 28            |
+| 4    | 209.141.61.33   | 28            |
+| 5    | 209.141.36.11   | 28            |
 
-Commands to parse `csv` for report:
+
+-   Commands to parse `csv` for report: `awk -F', ' '{print $2}' auth_logs.csv | sort | uniq -c | sort -nr | head -5`
+    -   ![extra 1](image-20.png)
 
 ### Username Used Report
 
-| Rank  | Username     | # of Attempts |
-| ----- | ------------ | ------------- |
-| 1     |              |     |
-| 2     |              |     |
-| 3     |              |     |
-| 4     |              |     |
-| 5     |              |     |
+| Rank | Username | # of Times Used |
+|------|----------|-----------------|
+| 1    | admin    | 79              |
+| 2    | user     | 74              |
+| 3    | test     | 28              |
+| 4    | oracle   | 18              |
+| 5    | postgres | 15              |
 
-Commands to parse `csv` for report:
+
+-   Commands to parse `csv` for report: `awk -F', ' '{print $2}' auth_logs.csv | sort | uniq -c | sort -nr | head -5`
+    -   ![extra 2](image-21.png)
