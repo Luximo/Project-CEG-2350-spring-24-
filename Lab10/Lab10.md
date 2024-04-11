@@ -7,33 +7,164 @@
 
 - `hostname`: 
     -   This command reveals the network name of the system. It’s a straightforward way to identify your computer on a network.
+    -   `ip-10-0-0-25`
 
 - `ifconfig`:
     -   This utility displays the network interfaces’ configurations, detailing IP addresses, netmask, and MTU. It’s essential for network management and troubleshooting.
+    -   ```
+        eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001
+        inet 10.0.0.25  netmask 255.255.255.0  broadcast 10.0.0.255
+        inet6 fe80::860:31ff:feff:438d  prefixlen 64  scopeid 0x20<link>
+        ether 0a:60:31:ff:43:8d  txqueuelen 1000  (Ethernet)
+        RX packets 1134  bytes 429132 (429.1 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1056  bytes 125116 (125.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+        lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+                inet 127.0.0.1  netmask 255.0.0.0
+                inet6 ::1  prefixlen 128  scopeid 0x10<host>
+                loop  txqueuelen 1000  (Local Loopback)
+                RX packets 88  bytes 8473 (8.4 KB)
+                RX errors 0  dropped 0  overruns 0  frame 0
+                TX packets 88  bytes 8473 (8.4 KB)
+                TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+        ```
 
 - `ip addr show`:
     -   It lists all network interfaces, along with their IP addresses and other network settings. This command is quite useful for a detailed network interface overview.
+    -   ```
+
+        1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+        link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+        inet 127.0.0.1/8 scope host lo
+        valid_lft forever preferred_lft forever
+        inet6 ::1/128 scope host
+        valid_lft forever preferred_lft forever
+        2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc fq_codel state UP group default qlen 1000
+            link/ether 0a:60:31:ff:43:8d brd ff:ff:ff:ff:ff:ff
+            inet 10.0.0.25/24 metric 100 brd 10.0.0.255 scope global dynamic eth0
+            valid_lft 2932sec preferred_lft 2932sec
+            inet6 fe80::860:31ff:feff:438d/64 scope link
+            valid_lft forever preferred_lft forever
+
+        ```
 
 - `route`: 
     -   This command presents the kernel’s IP routing table, showing destinations, gateways, and metrics. It’s vital for understanding how data packets travel across the network.
+    -   ```
+        Kernel IP routing table
+        Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+        default         _gateway        0.0.0.0         UG    100    0        0 eth0
+        10.0.0.0        0.0.0.0         255.255.255.0   U     100    0        0 eth0
+        _gateway        0.0.0.0         255.255.255.255 UH    100    0        0 eth0
+        10.0.0.2        0.0.0.0         255.255.255.255 UH    100    0        0 eth0
+
+        ```
 
 - `cat /var/lib/dhcp/dhclient.leases`:
-    -   If active, this would show the DHCP client’s leases, providing insights into the network’s dynamic configuration.
+    -   If active, this would show the DHCP client’s leases, providing insights into the network’s dynamic configuration. Since it is not active, I do not have one to specify...🥲
+    -   ![step 1a](image-23.png)
 
 - `cat /etc/resolv.conf`:
     -   It displays the DNS resolver settings, including nameservers and search domains. This file is crucial for DNS resolution and network connectivity.
+    -   ```
+        # This is /run/systemd/resolve/stub-resolv.conf managed by man:systemd-resolved(8).
+        # Do not edit.
+        #
+        # This file might be symlinked as /etc/resolv.conf. If you're looking at
+        # /etc/resolv.conf and seeing this text, you have followed the symlink.
+        #
+        # This is a dynamic resolv.conf file for connecting local clients to the
+        # internal DNS stub resolver of systemd-resolved. This file lists all
+        # configured search domains.
+        #
+        # Run "resolvectl status" to see details about the uplink DNS servers
+        # currently in use.
+        #
+        # Third party programs should typically not access this file directly, but only
+        # through the symlink at /etc/resolv.conf. To manage man:resolv.conf(5) in a
+        # different way, replace this symlink by a static file or a different symlink.
+        #
+        # See man:systemd-resolved.service(8) for details about the supported modes of
+        # operation for /etc/resolv.conf.
+
+        nameserver 127.0.0.53
+        options edns0 trust-ad
+        search ec2.internal
+
+        ```
 
 - `curl ipinfo.io`:
     -   This fetches a variety of network information about the current IP address, such as location and organisation details. It’s a quick method to gather IP-related data.
+    -   ```
+        {
+            "ip": "184.73.215.70",
+            "hostname": "ec2-184-73-215-70.compute-1.amazonaws.com",
+            "city": "Ashburn",
+            "region": "Virginia",
+            "country": "US",
+            "loc": "39.0437,-77.4875",
+            "org": "AS14618 Amazon.com, Inc.",
+            "postal": "20147",
+            "timezone": "America/New_York",
+            "readme": "https://ipinfo.io/missingauth"
+        }
+
+        ```
 
 - `iptables -L`:
     -   Lists all the current firewall rules set by iptables. It’s a key command for security and firewall configuration review.
+    -   I ran the iptables command with sudo by the way...
+    -   ```
+        Chain INPUT (policy ACCEPT)
+        target     prot opt source               destination
+
+        Chain FORWARD (policy ACCEPT)
+        target     prot opt source               destination
+
+        Chain OUTPUT (policy ACCEPT)
+        target     prot opt source               destination
+
+        ```
 
 - `nmap -p <IP_or_hostname>`: 
     -   Scans for open ports on a specified IP or hostname. It’s widely used in security audits and network assessments.
+    -   ```
+        Starting Nmap 7.80 ( https://nmap.org ) at 2024-04-11 21:18 UTC
+        Nmap scan report for ip-10-0-0-25 (10.0.0.25)
+        Host is up (0.00070s latency).
+
+        PORT   STATE SERVICE
+        22/tcp open  ssh
+
+        Nmap done: 1 IP address (1 host up) scanned in 0.05 seconds
+        ubuntu@ip-10-0-0-25:~/ceg2350s24-Luximo$
+
+
+        ```
 
 - `tcpdump -i <networkinterface> -n host <IP_or_hostname>`:
     -   Captures and displays network packets on a specified interface to or from a given IP or hostname. This is an indispensable tool for network analysis and monitoring.
+    - I got these values below using the sudo command included...
+    -   ```
+        21:24:53.209702 IP 10.0.0.25.22 > 74.135.75.4.51774: Flags [P.], seq 335580:335928, ack 181, win 465, options [nop,nop,TS val 3585923222 ecr 1984257664], length 348
+        21:24:53.241972 IP 74.135.75.4.51774 > 10.0.0.25.22: Flags [.], ack 335928, win 567, options [nop,nop,TS val 1984257768 ecr 3585923222], length 0
+        21:24:53.241972 IP 74.135.75.4.51774 > 10.0.0.25.22: Flags [P.], seq 181:217, ack 335928, win 567, options [nop,nop,TS val 1984257769 ecr 3585923222], length 36
+        21:24:53.241990 IP 10.0.0.25.22 > 74.135.75.4.51774: Flags [.], ack 217, win 465, options [nop,nop,TS val 3585923254 ecr 1984257769], length 0
+        21:24:53.313917 IP 10.0.0.25.22 > 74.135.75.4.51774: Flags [P.], seq 335928:336436, ack 217, win 465, options [nop,nop,TS val 3585923326 ecr 1984257769], length 508
+        21:24:53.314118 IP 10.0.0.25.22 > 74.135.75.4.51774: Flags [P.], seq 336436:336616, ack 217, win 465, options [nop,nop,TS val 3585923326 ecr 1984257769], length 180
+        21:24:53.348915 IP 74.135.75.4.51774 > 10.0.0.25.22: Flags [.], ack 336616, win 567, options [nop,nop,TS val 1984257873 ecr 3585923326], length 0
+        21:24:53.417730 IP 10.0.0.25.22 > 74.135.75.4.51774: Flags [P.], seq 336616:336820, ack 217, win 465, options [nop,nop,TS val 3585923430 ecr 1984257873], length 204
+        21:24:53.417930 IP 10.0.0.25.22 > 74.135.75.4.51774: Flags [P.], seq 336820:337176, ack 217, win 465, options [nop,nop,TS val 3585923430 ecr 1984257873], length 356
+        21:24:53.452475 IP 74.135.75.4.51774 > 10.0.0.25.22: Flags [.], ack 337176, win 567, options [nop,nop,TS val 1984257976 ecr 3585923430], length 0
+        ^C
+        1811 packets captured
+        1816 packets received by filter
+        0 packets dropped by kernel
+
+        ```
 
 ## Part 2 - Network Info
 
@@ -128,6 +259,8 @@ Screenshot of your changed Inbound Security Group rules.
     -   So I'd to add back the default rules and try to connect again, and it works fine now like this...
     -   ![step 4b](image-18.png)
     -   ![step 4c](image-19.png)
+    -   So I made a mistake using the public IP of my AWS instance instead of my home public IP address...
+    -   ![step 4d](image-24.png)
 
 -   Why should HTTP allow any IP, while SSH has restrictions?
     -   `Answer`: HTTP is ubiquitously sanctioned from any IP address, as it constitutes the protocol for web page retrieval, which are customarily intended for public accessibility. In contrast, SSH is employed for secure remote access and system management, thus its usage is confined to specific IP addresses to attenuate the prospect of illicit access and concomitant security vulnerabilities. Upon contemplation of their respective functions, the expansive accessibility of HTTP is warranted by its integral role in the widespread dissemination of information, aligning with the inherent design of web pages for public consumption. Conversely, the employment of SSH is intrinsically linked to the secure administration and remote logins, mandating stringent access restrictions to safeguard sensitive procedures and data. This dichotomy in access levels epitomises the equilibrium sought between the transparency requisite for services interfacing with users and the imperative of security for administrative portals.
