@@ -7,182 +7,210 @@
 
 - `hostname`: 
     -   This command reveals the network name of the system. It’s a straightforward way to identify your computer on a network.
-    -   `ip-10-0-0-25`
 
 - `ifconfig`:
     -   This utility displays the network interfaces’ configurations, detailing IP addresses, netmask, and MTU. It’s essential for network management and troubleshooting.
-    -   ```
-        eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001
-        inet 10.0.0.25  netmask 255.255.255.0  broadcast 10.0.0.255
-        inet6 fe80::860:31ff:feff:438d  prefixlen 64  scopeid 0x20<link>
-        ether 0a:60:31:ff:43:8d  txqueuelen 1000  (Ethernet)
-        RX packets 1134  bytes 429132 (429.1 KB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 1056  bytes 125116 (125.1 KB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-        lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-                inet 127.0.0.1  netmask 255.0.0.0
-                inet6 ::1  prefixlen 128  scopeid 0x10<host>
-                loop  txqueuelen 1000  (Local Loopback)
-                RX packets 88  bytes 8473 (8.4 KB)
-                RX errors 0  dropped 0  overruns 0  frame 0
-                TX packets 88  bytes 8473 (8.4 KB)
-                TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-        ```
 
 - `ip addr show`:
     -   It lists all network interfaces, along with their IP addresses and other network settings. This command is quite useful for a detailed network interface overview.
-    -   ```
-
-        1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-        link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-        inet 127.0.0.1/8 scope host lo
-        valid_lft forever preferred_lft forever
-        inet6 ::1/128 scope host
-        valid_lft forever preferred_lft forever
-        2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc fq_codel state UP group default qlen 1000
-            link/ether 0a:60:31:ff:43:8d brd ff:ff:ff:ff:ff:ff
-            inet 10.0.0.25/24 metric 100 brd 10.0.0.255 scope global dynamic eth0
-            valid_lft 2932sec preferred_lft 2932sec
-            inet6 fe80::860:31ff:feff:438d/64 scope link
-            valid_lft forever preferred_lft forever
-
-        ```
 
 - `route`: 
     -   This command presents the kernel’s IP routing table, showing destinations, gateways, and metrics. It’s vital for understanding how data packets travel across the network.
-    -   ```
-        Kernel IP routing table
-        Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
-        default         _gateway        0.0.0.0         UG    100    0        0 eth0
-        10.0.0.0        0.0.0.0         255.255.255.0   U     100    0        0 eth0
-        _gateway        0.0.0.0         255.255.255.255 UH    100    0        0 eth0
-        10.0.0.2        0.0.0.0         255.255.255.255 UH    100    0        0 eth0
-
-        ```
-
+    
 - `cat /var/lib/dhcp/dhclient.leases`:
     -   If active, this would show the DHCP client’s leases, providing insights into the network’s dynamic configuration. Since it is not active, I do not have one to specify...🥲
     -   ![step 1a](image-23.png)
 
 - `cat /etc/resolv.conf`:
     -   It displays the DNS resolver settings, including nameservers and search domains. This file is crucial for DNS resolution and network connectivity.
-    -   ```
-        # This is /run/systemd/resolve/stub-resolv.conf managed by man:systemd-resolved(8).
-        # Do not edit.
-        #
-        # This file might be symlinked as /etc/resolv.conf. If you're looking at
-        # /etc/resolv.conf and seeing this text, you have followed the symlink.
-        #
-        # This is a dynamic resolv.conf file for connecting local clients to the
-        # internal DNS stub resolver of systemd-resolved. This file lists all
-        # configured search domains.
-        #
-        # Run "resolvectl status" to see details about the uplink DNS servers
-        # currently in use.
-        #
-        # Third party programs should typically not access this file directly, but only
-        # through the symlink at /etc/resolv.conf. To manage man:resolv.conf(5) in a
-        # different way, replace this symlink by a static file or a different symlink.
-        #
-        # See man:systemd-resolved.service(8) for details about the supported modes of
-        # operation for /etc/resolv.conf.
-
-        nameserver 127.0.0.53
-        options edns0 trust-ad
-        search ec2.internal
-
-        ```
 
 - `curl ipinfo.io`:
     -   This fetches a variety of network information about the current IP address, such as location and organisation details. It’s a quick method to gather IP-related data.
-    -   ```
-        {
-            "ip": "184.73.215.70",
-            "hostname": "ec2-184-73-215-70.compute-1.amazonaws.com",
-            "city": "Ashburn",
-            "region": "Virginia",
-            "country": "US",
-            "loc": "39.0437,-77.4875",
-            "org": "AS14618 Amazon.com, Inc.",
-            "postal": "20147",
-            "timezone": "America/New_York",
-            "readme": "https://ipinfo.io/missingauth"
-        }
-
-        ```
 
 - `iptables -L`:
     -   Lists all the current firewall rules set by iptables. It’s a key command for security and firewall configuration review.
     -   I ran the iptables command with sudo by the way...
-    -   ```
-        Chain INPUT (policy ACCEPT)
-        target     prot opt source               destination
-
-        Chain FORWARD (policy ACCEPT)
-        target     prot opt source               destination
-
-        Chain OUTPUT (policy ACCEPT)
-        target     prot opt source               destination
-
-        ```
-
+   
 - `nmap -p <IP_or_hostname>`: 
     -   Scans for open ports on a specified IP or hostname. It’s widely used in security audits and network assessments.
-    -   ```
-        Starting Nmap 7.80 ( https://nmap.org ) at 2024-04-11 21:18 UTC
-        Nmap scan report for ip-10-0-0-25 (10.0.0.25)
-        Host is up (0.00070s latency).
-
-        PORT   STATE SERVICE
-        22/tcp open  ssh
-
-        Nmap done: 1 IP address (1 host up) scanned in 0.05 seconds
-        ubuntu@ip-10-0-0-25:~/ceg2350s24-Luximo$
-
-
-        ```
 
 - `tcpdump -i <networkinterface> -n host <IP_or_hostname>`:
     -   Captures and displays network packets on a specified interface to or from a given IP or hostname. This is an indispensable tool for network analysis and monitoring.
     - I got these values below using the sudo command included...
-    -   ```
-        21:24:53.209702 IP 10.0.0.25.22 > 74.135.75.4.51774: Flags [P.], seq 335580:335928, ack 181, win 465, options [nop,nop,TS val 3585923222 ecr 1984257664], length 348
-        21:24:53.241972 IP 74.135.75.4.51774 > 10.0.0.25.22: Flags [.], ack 335928, win 567, options [nop,nop,TS val 1984257768 ecr 3585923222], length 0
-        21:24:53.241972 IP 74.135.75.4.51774 > 10.0.0.25.22: Flags [P.], seq 181:217, ack 335928, win 567, options [nop,nop,TS val 1984257769 ecr 3585923222], length 36
-        21:24:53.241990 IP 10.0.0.25.22 > 74.135.75.4.51774: Flags [.], ack 217, win 465, options [nop,nop,TS val 3585923254 ecr 1984257769], length 0
-        21:24:53.313917 IP 10.0.0.25.22 > 74.135.75.4.51774: Flags [P.], seq 335928:336436, ack 217, win 465, options [nop,nop,TS val 3585923326 ecr 1984257769], length 508
-        21:24:53.314118 IP 10.0.0.25.22 > 74.135.75.4.51774: Flags [P.], seq 336436:336616, ack 217, win 465, options [nop,nop,TS val 3585923326 ecr 1984257769], length 180
-        21:24:53.348915 IP 74.135.75.4.51774 > 10.0.0.25.22: Flags [.], ack 336616, win 567, options [nop,nop,TS val 1984257873 ecr 3585923326], length 0
-        21:24:53.417730 IP 10.0.0.25.22 > 74.135.75.4.51774: Flags [P.], seq 336616:336820, ack 217, win 465, options [nop,nop,TS val 3585923430 ecr 1984257873], length 204
-        21:24:53.417930 IP 10.0.0.25.22 > 74.135.75.4.51774: Flags [P.], seq 336820:337176, ack 217, win 465, options [nop,nop,TS val 3585923430 ecr 1984257873], length 356
-        21:24:53.452475 IP 74.135.75.4.51774 > 10.0.0.25.22: Flags [.], ack 337176, win 567, options [nop,nop,TS val 1984257976 ecr 3585923430], length 0
-        ^C
-        1811 packets captured
-        1816 packets received by filter
-        0 packets dropped by kernel
-
-        ```
 
 ## Part 2 - Network Info
 
 ### Network Info for Windows 11
 
 1. Hostname of the device: `hostname`
+    -   Lux
     -   ![step 2a](image.png)
 
 2. MAC address of the NIC connected to the network: `Get-NetIPConfiguration | select -ExpandProperty IPv4Address`
+    -   ```
+            IPAddress         : 192.168.56.1
+            InterfaceIndex    : 13
+            InterfaceAlias    : Ethernet 2
+            AddressFamily     : IPv4
+            Type              : Unicast
+            PrefixLength      : 24
+            PrefixOrigin      : Manual
+            SuffixOrigin      : Manual
+            AddressState      : Preferred
+            ValidLifetime     :
+            PreferredLifetime :
+            SkipAsSource      : False
+            PolicyStore       : ActiveStore
+
+            IPAddress         : 192.168.17.1
+            InterfaceIndex    : 14
+            InterfaceAlias    : VMware Network Adapter VMnet8
+            AddressFamily     : IPv4
+            Type              : Unicast
+            PrefixLength      : 24
+            PrefixOrigin      : Dhcp
+            SuffixOrigin      : Dhcp
+            AddressState      : Preferred
+            ValidLifetime     : 00:16:20
+            PreferredLifetime : 00:16:20
+            SkipAsSource      : False
+            PolicyStore       : ActiveStore
+
+            IPAddress         : 192.168.1.126
+            InterfaceIndex    : 2
+            InterfaceAlias    : Ethernet
+            AddressFamily     : IPv4
+            Type              : Unicast
+            PrefixLength      : 24
+            PrefixOrigin      : Dhcp
+            SuffixOrigin      : Dhcp
+            AddressState      : Preferred
+            ValidLifetime     : 09:56:16
+            PreferredLifetime : 09:56:16
+            SkipAsSource      : False
+            PolicyStore       : ActiveStore
+
+            IPAddress         : 192.168.86.1
+            InterfaceIndex    : 21
+            InterfaceAlias    : VMware Network Adapter VMnet1
+            AddressFamily     : IPv4
+            Type              : Unicast
+            PrefixLength      : 24
+            PrefixOrigin      : Dhcp
+            SuffixOrigin      : Dhcp
+            AddressState      : Preferred
+            ValidLifetime     : 00:16:20
+            PreferredLifetime : 00:16:20
+            SkipAsSource      : False
+            PolicyStore       : ActiveStore
+
+            IPAddress         : 169.254.113.193
+            InterfaceIndex    : 20
+            InterfaceAlias    : Wi-Fi
+            AddressFamily     : IPv4
+            Type              : Unicast
+            PrefixLength      : 16
+            PrefixOrigin      : WellKnown
+            SuffixOrigin      : Link
+            AddressState      : Tentative
+            ValidLifetime     :
+            PreferredLifetime :
+            SkipAsSource      : False
+            PolicyStore       : ActiveStore
+
+            IPAddress         : 192.168.0.0
+            InterfaceIndex    : 18
+            InterfaceAlias    : Wintun
+            AddressFamily     : IPv4
+            Type              : Unicast
+            PrefixLength      : 16
+            PrefixOrigin      : Manual
+            SuffixOrigin      : Manual
+            AddressState      : Tentative
+            ValidLifetime     :
+            PreferredLifetime :
+            SkipAsSource      : False
+            PolicyStore       : ActiveStore
+
+            IPAddress         : 169.254.168.66
+            InterfaceIndex    : 18
+            InterfaceAlias    : Wintun
+            AddressFamily     : IPv4
+            Type              : Unicast
+            PrefixLength      : 16
+            PrefixOrigin      : WellKnown
+            SuffixOrigin      : Link
+            AddressState      : Tentative
+            ValidLifetime     :
+            PreferredLifetime :
+            SkipAsSource      : False
+            PolicyStore       : ActiveStore
+
+            IPAddress         : 169.254.47.132
+            InterfaceIndex    : 26
+            InterfaceAlias    : Bluetooth Network Connection
+            AddressFamily     : IPv4
+            Type              : Unicast
+            PrefixLength      : 16
+            PrefixOrigin      : WellKnown
+            SuffixOrigin      : Link
+            AddressState      : Tentative
+            ValidLifetime     :
+            PreferredLifetime :
+            SkipAsSource      : False
+            PolicyStore       : ActiveStore
+
+        ```
     -   ![step 2b](image-1.png)
 
 3. IPv4 address: `Get-NetIPConfiguration | select -ExpandProperty IPv4Address | select IPAddress`
+    -   ```
+        IPAddress
+        ---------
+        192.168.56.1
+        192.168.17.1
+        192.168.1.126
+        192.168.86.1
+        169.254.113.193
+        192.168.0.0
+        169.254.168.66
+        169.254.47.132
+
+        ```
     -   ![step 2c](image-2.png)
 
 4. Subnet mask: `Get-NetIPConfiguration | select -ExpandProperty IPv4Address | select PrefixLength`
+    -   ```
+        
+        PrefixLength
+        ------------
+                24
+                24
+                24
+                24
+                16
+                16
+                16
+                16
+
+        ```
     -   ![step 2d](image-3.png)
 
 5. Gateway address: `Get-NetIPConfiguration | select -ExpandProperty IPv4Address | select @{Name='DefaultGateway'; Expression={ $_.IPv4DefaultGateway.NextHop }}`
+    -   ```
+            DefaultGateway
+            --------------
+
+
+
+
+
+
+
+
+
+
+        ```
     -   ![step 2e](image-4.png)
 
 6. DHCP server address: `Get-DhcpServerInDC`
@@ -190,27 +218,69 @@
     -   ![step 2f](image-5.png)
 
 7. DNS server address: `Get-DnsClientServerAddress`
+    -   ```
+            
+        InterfaceAlias               Interface Address ServerAddresses
+                                    Index     Family
+        --------------               --------- ------- ---------------
+        Wintun                              18 IPv4    {}
+        Wintun                              18 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
+        Ethernet                             2 IPv4    {192.168.1.1}
+        Ethernet                             2 IPv6    {2606:4700:4700::1111, 2606:4700:4700::1001}
+        Ethernet 2                          13 IPv4    {}
+        Ethernet 2                          13 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
+        Wi-Fi                               20 IPv4    {192.168.24.1}
+        Wi-Fi                               20 IPv6    {}
+        Local Area Connection* 3             9 IPv4    {}
+        Local Area Connection* 3             9 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
+        Local Area Connection* 4            11 IPv4    {}
+        Local Area Connection* 4            11 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
+        VMware Network Adapter V...1        21 IPv4    {}
+        VMware Network Adapter V...1        21 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
+        VMware Network Adapter V...8        14 IPv4    {}
+        VMware Network Adapter V...8        14 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
+        Bluetooth Network Connection        26 IPv4    {}
+        Bluetooth Network Connection        26 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
+        Loopback Pseudo-Interface 1          1 IPv4    {}
+        Loopback Pseudo-Interface 1          1 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
+        vEthernet (WSL (Hyper-V f...        58 IPv4    {}
+        vEthernet (WSL (Hyper-V f...        58 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
+
+        ```
     -   ![step 2g](image-6.png)
 
 8. Public IPv4 address: `Invoke-RestMethod -Uri http://ipinfo.io/json | Select -ExpandProperty ip`
+    -   ```
+        74.135.75.4
+
+        ```
     -   ![step 2h](image-7.png)
 
 ### Network Info for AWS Instance
 
 1. Hostname of the device: `hostname`
+    -   `ip-10-0-0-25`
     -   ![step 2i](image-8.png)
 
+
 2. MAC address of the NIC connected to the network: `cat /sys/class/net/eth0/address`. 
+    -   ```
+        0a:60:31:ff:43:8d
+
+        ```
     -   ![step 2j](image-9.png)
     -   ![step 2k](image-10.png)
 
 3. IPv4 address: `ip -4 addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'`
+    -   `10.0.0.25`
     -   ![step 2l](image-11.png)
 
 4. Subnet mask: `ip -4 addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}/\d+'`
+    -   `10.0.0.25/24`
     -   ![step 2m](image-12.png)
 
 5. Gateway address: `ip route show default | grep -oP '(?<=via\s)\d+(\.\d+){3}'`
+    -   `10.0.0.1`
     -   ![step 2n](image-13.png)
 
 6. DHCP server address: `cat /var/lib/dhcp/dhclient.leases`
@@ -218,9 +288,11 @@
     -   ![step 2o](image-14.png)
 
 7. DNS server address: `cat /etc/resolv.conf | grep nameserver`
+    -   `nameserver 127.0.0.53`
     -   ![step 2p](image-15.png)
 
 8. Public IPv4 address: `curl http://ipinfo.io/ip`
+    -   `184.73.215.70`
     -   ![step 2q](image-16.png)
 
 ## Part 3 - Subnet Translation
