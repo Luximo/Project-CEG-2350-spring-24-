@@ -19,7 +19,6 @@
     
 - `cat /var/lib/dhcp/dhclient.leases`:
     -   If active, this would show the DHCP client’s leases, providing insights into the network’s dynamic configuration. Since it is not active, I do not have one to specify...🥲
-    -   ![step 1a](image-23.png)
 
 - `cat /etc/resolv.conf`:
     -   It displays the DNS resolver settings, including nameservers and search domains. This file is crucial for DNS resolution and network connectivity.
