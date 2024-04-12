@@ -43,75 +43,31 @@
 
 1. Hostname of the device: `hostname`
     -   Lux
-    -   ![step 2a](image.png)
 
-2. MAC address of the NIC connected to the network: `Get-NetIPConfiguration | select -ExpandProperty IPv4Address`
-    -   ```
-            IPAddress         : 192.168.1.126
-            InterfaceIndex    : 2
-            InterfaceAlias    : Ethernet
-            AddressFamily     : IPv4
-            Type              : Unicast
-            PrefixLength      : 24
-            PrefixOrigin      : Dhcp
-            SuffixOrigin      : Dhcp
-            AddressState      : Preferred
-            ValidLifetime     : 09:56:16
-            PreferredLifetime : 09:56:16
-            SkipAsSource      : False
-            PolicyStore       : ActiveStore
-
-        ```
-    -   ![step 2b](image-1.png)
+2. MAC address of the NIC connected to the network: `Get-NetAdapter | select Name, MacAddress`
+    -   `1C-69-7A-F3-E2-6B`
 
 3. IPv4 address: `Get-NetIPConfiguration | select -ExpandProperty IPv4Address | select IPAddress`
-    -   ```
-        IPAddress
-        ---------
-        192.168.1.126
-        ```
-    -   ![step 2c](image-2.png)
+    -   `192.168.1.126`
 
 4. Subnet mask: `Get-NetIPConfiguration | select -ExpandProperty IPv4Address | select PrefixLength`
-    -   ```
-        
-        PrefixLength
-        ------------
-                24
-
-        ```
-    -   ![step 2d](image-3.png)
+    -   `255.255.255.0`
 
 5. Gateway address: `ipconfig /all | findstr /C:"Ethernet adapter Ethernet" /C:"Default Gateway"`
-    -   ```
-            DefaultGateway
-            --------------
-            fe80::f27b:65ff:fe8e:99fd%2
-
-        ```
-    -   ![step 2e](image-25.png)
+    -   `192.168.1.1`
 
 6. DHCP server address: `ipconfig /all | findstr /C:"Ethernet adapter Ethernet" /C:"DHCP Server"`
-    -   `DHCP Server . . . . . . . . . . . : 192.168.1.1`
+    -   `192.168.1.1`
 
 7. DNS server address: `Get-DnsClientServerAddress`
     -   ```
-            
-        InterfaceAlias               Interface Address ServerAddresses
-                                    Index     Family
-        --------------               --------- ------- ---------------
-        Ethernet                             2 IPv4    {192.168.1.1}
-        Ethernet                             2 IPv6    {2606:4700:4700::1111, 2606:4700:4700::1001}
-
+            2606:4700:4700::1111
+            2606:4700:4700::1001
+            192.168.1.1
         ```
-    -   ![step 2g](image-6.png)
 
 8. Public IPv4 address: `Invoke-RestMethod -Uri http://ipinfo.io/json | Select -ExpandProperty ip`
-    -   ```
-        74.135.75.4
-
-        ```
-    -   ![step 2h](image-7.png)
+    -   `74.135.75.4`
 
 ### Network Info for AWS Instance
 
