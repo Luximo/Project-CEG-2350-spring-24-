@@ -47,34 +47,6 @@
 
 2. MAC address of the NIC connected to the network: `Get-NetIPConfiguration | select -ExpandProperty IPv4Address`
     -   ```
-            IPAddress         : 192.168.56.1
-            InterfaceIndex    : 13
-            InterfaceAlias    : Ethernet 2
-            AddressFamily     : IPv4
-            Type              : Unicast
-            PrefixLength      : 24
-            PrefixOrigin      : Manual
-            SuffixOrigin      : Manual
-            AddressState      : Preferred
-            ValidLifetime     :
-            PreferredLifetime :
-            SkipAsSource      : False
-            PolicyStore       : ActiveStore
-
-            IPAddress         : 192.168.17.1
-            InterfaceIndex    : 14
-            InterfaceAlias    : VMware Network Adapter VMnet8
-            AddressFamily     : IPv4
-            Type              : Unicast
-            PrefixLength      : 24
-            PrefixOrigin      : Dhcp
-            SuffixOrigin      : Dhcp
-            AddressState      : Preferred
-            ValidLifetime     : 00:16:20
-            PreferredLifetime : 00:16:20
-            SkipAsSource      : False
-            PolicyStore       : ActiveStore
-
             IPAddress         : 192.168.1.126
             InterfaceIndex    : 2
             InterfaceAlias    : Ethernet
@@ -89,76 +61,6 @@
             SkipAsSource      : False
             PolicyStore       : ActiveStore
 
-            IPAddress         : 192.168.86.1
-            InterfaceIndex    : 21
-            InterfaceAlias    : VMware Network Adapter VMnet1
-            AddressFamily     : IPv4
-            Type              : Unicast
-            PrefixLength      : 24
-            PrefixOrigin      : Dhcp
-            SuffixOrigin      : Dhcp
-            AddressState      : Preferred
-            ValidLifetime     : 00:16:20
-            PreferredLifetime : 00:16:20
-            SkipAsSource      : False
-            PolicyStore       : ActiveStore
-
-            IPAddress         : 169.254.113.193
-            InterfaceIndex    : 20
-            InterfaceAlias    : Wi-Fi
-            AddressFamily     : IPv4
-            Type              : Unicast
-            PrefixLength      : 16
-            PrefixOrigin      : WellKnown
-            SuffixOrigin      : Link
-            AddressState      : Tentative
-            ValidLifetime     :
-            PreferredLifetime :
-            SkipAsSource      : False
-            PolicyStore       : ActiveStore
-
-            IPAddress         : 192.168.0.0
-            InterfaceIndex    : 18
-            InterfaceAlias    : Wintun
-            AddressFamily     : IPv4
-            Type              : Unicast
-            PrefixLength      : 16
-            PrefixOrigin      : Manual
-            SuffixOrigin      : Manual
-            AddressState      : Tentative
-            ValidLifetime     :
-            PreferredLifetime :
-            SkipAsSource      : False
-            PolicyStore       : ActiveStore
-
-            IPAddress         : 169.254.168.66
-            InterfaceIndex    : 18
-            InterfaceAlias    : Wintun
-            AddressFamily     : IPv4
-            Type              : Unicast
-            PrefixLength      : 16
-            PrefixOrigin      : WellKnown
-            SuffixOrigin      : Link
-            AddressState      : Tentative
-            ValidLifetime     :
-            PreferredLifetime :
-            SkipAsSource      : False
-            PolicyStore       : ActiveStore
-
-            IPAddress         : 169.254.47.132
-            InterfaceIndex    : 26
-            InterfaceAlias    : Bluetooth Network Connection
-            AddressFamily     : IPv4
-            Type              : Unicast
-            PrefixLength      : 16
-            PrefixOrigin      : WellKnown
-            SuffixOrigin      : Link
-            AddressState      : Tentative
-            ValidLifetime     :
-            PreferredLifetime :
-            SkipAsSource      : False
-            PolicyStore       : ActiveStore
-
         ```
     -   ![step 2b](image-1.png)
 
@@ -166,15 +68,7 @@
     -   ```
         IPAddress
         ---------
-        192.168.56.1
-        192.168.17.1
         192.168.1.126
-        192.168.86.1
-        169.254.113.193
-        192.168.0.0
-        169.254.168.66
-        169.254.47.132
-
         ```
     -   ![step 2c](image-2.png)
 
@@ -184,13 +78,6 @@
         PrefixLength
         ------------
                 24
-                24
-                24
-                24
-                16
-                16
-                16
-                16
 
         ```
     -   ![step 2d](image-3.png)
@@ -199,14 +86,6 @@
     -   ```
             DefaultGateway
             --------------
-
-
-
-
-
-
-
-
 
 
         ```
@@ -222,28 +101,8 @@
         InterfaceAlias               Interface Address ServerAddresses
                                     Index     Family
         --------------               --------- ------- ---------------
-        Wintun                              18 IPv4    {}
-        Wintun                              18 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
         Ethernet                             2 IPv4    {192.168.1.1}
         Ethernet                             2 IPv6    {2606:4700:4700::1111, 2606:4700:4700::1001}
-        Ethernet 2                          13 IPv4    {}
-        Ethernet 2                          13 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
-        Wi-Fi                               20 IPv4    {192.168.24.1}
-        Wi-Fi                               20 IPv6    {}
-        Local Area Connection* 3             9 IPv4    {}
-        Local Area Connection* 3             9 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
-        Local Area Connection* 4            11 IPv4    {}
-        Local Area Connection* 4            11 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
-        VMware Network Adapter V...1        21 IPv4    {}
-        VMware Network Adapter V...1        21 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
-        VMware Network Adapter V...8        14 IPv4    {}
-        VMware Network Adapter V...8        14 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
-        Bluetooth Network Connection        26 IPv4    {}
-        Bluetooth Network Connection        26 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
-        Loopback Pseudo-Interface 1          1 IPv4    {}
-        Loopback Pseudo-Interface 1          1 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
-        vEthernet (WSL (Hyper-V f...        58 IPv4    {}
-        vEthernet (WSL (Hyper-V f...        58 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}
 
         ```
     -   ![step 2g](image-6.png)
