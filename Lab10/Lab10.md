@@ -82,18 +82,17 @@
         ```
     -   ![step 2d](image-3.png)
 
-5. Gateway address: `Get-NetIPConfiguration | select -ExpandProperty IPv4Address | select @{Name='DefaultGateway'; Expression={ $_.IPv4DefaultGateway.NextHop }}`
+5. Gateway address: `ipconfig /all | findstr /C:"Ethernet adapter Ethernet" /C:"Default Gateway"`
     -   ```
             DefaultGateway
             --------------
-
+            fe80::f27b:65ff:fe8e:99fd%2
 
         ```
-    -   ![step 2e](image-4.png)
+    -   ![step 2e](image-25.png)
 
-6. DHCP server address: `Get-DhcpServerInDC`
-    -   I do not have one to specify...🥲
-    -   ![step 2f](image-5.png)
+6. DHCP server address: `ipconfig /all | findstr /C:"Ethernet adapter Ethernet" /C:"DHCP Server"`
+    -   `DHCP Server . . . . . . . . . . . : 192.168.1.1`
 
 7. DNS server address: `Get-DnsClientServerAddress`
     -   ```
