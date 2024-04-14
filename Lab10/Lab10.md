@@ -138,14 +138,11 @@ Screenshot of your changed Inbound Security Group rules.
 <!-- ![Inbound Rules for Lab 10](relative/path/to/image) -->
 
 1. Remove the two default rules:
-    -   ![step 4](image-17.png)
-    - After updating the security group rules, I couldn't connect to my instance
-    -   ![step 4d](image-22.png)
-    -   So I'd to add back the default rules and try to connect again, and it works fine now like this...
-    -   ![step 4b](image-18.png)
-    -   ![step 4c](image-19.png)
-    -   So I made a mistake using the public IP of my AWS instance instead of my home public IP address...
-    -   ![step 4d](image-24.png)
+This is my updated rules without the terrible default rules.
+-   ![step 4a](image-26.png)
+I Couldn't connect to my instance so I'd to add back the terrible default rules and it works fine now...
+-   
+
 
 -   Why should HTTP allow any IP, while SSH has restrictions?
     -   `Answer`: HTTP is ubiquitously sanctioned from any IP address, as it constitutes the protocol for web page retrieval, which are customarily intended for public accessibility. In contrast, SSH is employed for secure remote access and system management, thus its usage is confined to specific IP addresses to attenuate the prospect of illicit access and concomitant security vulnerabilities. Upon contemplation of their respective functions, the expansive accessibility of HTTP is warranted by its integral role in the widespread dissemination of information, aligning with the inherent design of web pages for public consumption. Conversely, the employment of SSH is intrinsically linked to the secure administration and remote logins, mandating stringent access restrictions to safeguard sensitive procedures and data. This dichotomy in access levels epitomises the equilibrium sought between the transparency requisite for services interfacing with users and the imperative of security for administrative portals.
