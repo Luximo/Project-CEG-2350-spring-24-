@@ -3,3 +3,7 @@ Otuvedo
 Otuvedo
 postgres
 gzip
+Forcados
+Solade
+Wole
+Wole

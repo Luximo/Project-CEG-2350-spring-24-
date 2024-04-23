@@ -21,12 +21,24 @@
 ## Part 2 - Process Control
 
 1. `ps` field descriptions:
-   - USER / UID: `Ubuntu / 1000`
-   - PID: `840`
-   - PPID: `732`
-   - TTY: `pts/0`
-   - STAT: `S`
-   - COMMAND / CMD: `sshd: ubuntu@pts/0`
+   - USER / UID: This designation delineates the appellation or unique identifier ascribed to the proprietor of the process.
+   -  `Ubuntu / 1000`
+
+   - PID: An acronym for Process Identifier, this is an exclusive numerical label allocated to each operative procedure.
+   -  `840`
+
+   - PPID: Denoting Parent Process Identifier, this numeric value corresponds to the progenitor process that engendered the current operation.
+   -  `732`
+
+   - TTY: This abbreviation signifies the terminal interface archetype to which the user is actively connected.
+   -  `pts/0`
+
+   - STAT: This parameter articulates the current disposition of the process, encompassing states such as active execution, dormancy, cessation, or defunct status.
+   -  `S`
+
+   - COMMAND / CMD: This entry exhibits the precise command line invocation that initiated the process in question.
+   -  `sshd: ubuntu@pts/0`
+   
    ![Step 1 completed](image-5.png)
 
 2. `ps` command: `ps -u $(whoami) -o user,uid,pid,ppid,tty,stat,cmd | grep ' ? '`
