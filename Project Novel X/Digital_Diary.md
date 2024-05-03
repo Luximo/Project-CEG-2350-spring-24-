@@ -1,59 +1,75 @@
-# Challenging Experiences as a Ruby Software Engineer
+## Challenging Experiences as a Ruby Software Engineer
 
-Social media often highlights the brightest moments, but it doesn't always reflect the full spectrum of experiences. Below are some of the challenges I've faced as a Ruby software engineer working with clients:
+*Just a bit ago...*
 
-## Client A
+We often hear about the wins in tech. I want to share some tough bits.
 
-Client A engaged me to develop a **Ruby-based application**. The collaboration was smooth, and they were thrilled with the end result.
+Three times when working with clients was tricky...
 
-### The Billing Phase
+## 1. Partner Alpha
 
-- **3 months** after invoicing, I hadn't received payment—a not-so-uncommon occurrence in our field.
-- **6 months** went by... still no payment.
-- **9 months** later...
+**Partner Alpha** asked me to do a Ruby project. They were kind, liked my ideas, and all went well. I finished the app, and they were chuffed.
 
-I sent courteous reminders every few months. Their reasons shifted: an overhaul of their billing system, turnover in their finance department, or internal restructuring.
+But then it was time to pay...
 
-Finally, the payment came through.
+- **Three months after billing**—no dosh (it's not rare).
+- **Six months**... still nothing (sadly, it happens).
+- **Nine months later**...
 
-- **1 year and 5 months** after delivering the project.
+I kept sending polite nudges every so often. They had all sorts of excuses: a new billing system, the payment person had left, or company changes.
 
-The irony? The application was a hit, heavily promoted by them. Meanwhile, I kept seeing ads for the very Ruby application I had crafted, yet to be compensated for.
+At last, I got paid—one year and five months after I was done.
 
-Client A is a financial powerhouse, boasting a market cap well over **$10 billion**.
+The app did great for them—they even spent loads on ads for it. All that time, I saw ads for my own work, wondering if I'd ever see the money.
 
-## Client B
+Just so you know, Partner Alpha is loaded; they're worth over £10 billion.
 
-Client B was among my first clients when I ventured into freelance Ruby development. Their engagement was particularly exciting, as I was a regular user of their services.
+## 2. Firm Beta
 
-We signed contracts, I met their Ruby specifications, and delivered.
+**Firm Beta** was one of my first gigs when I started freelancing. I was over the moon when they got in touch—I loved their product and used it all the time.
 
-- **3 months** later, no payment—nor any replies to my follow-ups.
+I got the contract sorted, got the thumbs up for my work, and I shared it.
 
-It turned out the agency that contracted me had gone bankrupt. They had been paid by Client B but hadn't passed on the funds to any developers. Both Client B and the developers, including myself, were at a loss.
+Three months without a penny, and they ghosted my emails. Odd, that.
 
-Early in my career, I had invested significantly to deliver top-notch work. I assembled a skilled team and invested in premium tools.
+Turned out, the agency that hired me had gone bust. They nicked the money from Firm Beta, ran out of cash, and didn't pay any of us.
 
-I ensured my team was paid in full, but I never saw a dime for the project, leading to a personal financial hit of several thousand dollars.
+Early in my career, I'd splashed out to make this project top-notch. I'd forked out loads for a pro team and kit to ensure the quality was ace.
 
-I continue to use their product daily (it's top-quality), but it serves as a constant reminder of that financial setback.
+I'd paid my team fair and square, but I ended up out of pocket big time.
 
-## Client C
+I still use their product. It's cracking, but it's a daily nudge of the cash I lost.
 
-Client C was prompt and thorough with payment, but the experience left much to be desired.
+## 3. Enterprise Gamma
 
-They were an ideal client on paper. When they reached out for a Ruby project, I was ecstatic about the prospect of adding their esteemed name to my portfolio.
+**Enterprise Gamma** paid up quick and in full, but this one was gutting.
 
-Yet, working with them proved strenuous. They had exacting standards, necessitating numerous revisions and navigating complex legalities. Their project took precedence due to an impending deadline.
+Gamma was the dream. A few years back, when I was just starting, they got in touch. Their email was a shocker. Me? They wanted me? The buzz and validation were unreal.
 
-Client C was impressed with my Ruby work, which was poised for a grand showcase.
+But Gamma was tough as nails. They were dead specific about what they wanted. I jumped through many legal loopholes and redid my work loads to get it right. It was a manic time, and I put off other stuff to make it happen.
 
-Then, without warning, the campaign was scrapped. No rationale provided. While they settled the bill, the financial gain wasn't my main drive. I was after the exposure and the boost in credibility.
+They were made up with my work. I was buzzing. My work would be seen by millions.
 
-I later found out that Client C often starts and then abandons campaigns, a practice they can afford given their allure as a client.
+Then the email came:
 
-Years down the line, Client C came back with another offer for a campaign—this time with no budget. By then, I had made a name for myself and politely declined, though my earlier self might have jumped at the chance for the visibility.
+They'd canned the whole thing. My work, and everyone else's, wouldn't get used. No reason why. They'd pay us, but it wasn't about the money. They're known for paying peanuts because everyone's desperate to work with them.
+
+I was gutted. I'd given it my all, thinking it would be a game-changer.
+
+I found out later it's normal for Gamma. They start loads of projects, pick what they like, and drop the rest.
+
+Years later, Gamma came back for more. Another project. A video to big up their product on their site.
+
+The budget? Zilch. One of the richest companies out there, wanting free work for a bit of limelight.
+
+This time, I said no.
+
+I'd made a name for myself enough to turn it down. But I felt for the old me—the keen bean—who would've said yes, needing the break.
 
 ---
 
-I share these stories not in search of sympathy, but to extend comfort to those who may be navigating similar waters. You're not alone, and it's perfectly normal to feel aggrieved by such ordeals.
+*I'd love to tell you who they are, but I've got to keep schtum because of NDAs and not wanting a fuss.*
+
+*I'm not after sympathy. I'm lucky to do what I love, and most clients are sound.*
+
+*But these things happened when I was just a newbie. I felt on my own and out of luck. If you're in tech and this sounds familiar, you're not on your own.*
